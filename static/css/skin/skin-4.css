@@ -1,0 +1,240 @@
+
+/*===================== 
+	Premery bg color 
+=====================*/
+
+::selection {
+ background: #d87c44;
+}
+::-moz-selection {
+ background: #d87c44;
+}
+::-webkit-selection {
+  background: #d87c44;
+}
+
+/* Premery bg Hex color*/
+.bg-primary,
+.nav-line-animation > li > a:before,
+.nav-line-animation > li > a:after,
+.input-animate.input .spin,
+.wt-separator:after,
+.work-hover-grid h5,
+.sep-line-one:after,
+.wt-separator:before,
+.sep-line-one:before,
+.site-button-link::before,
+.our-team-two h5,
+.play-now .icon,
+.latest-blog-1 .wt-post-info .post-date:after,
+.filter-navigation a::before,
+.f-social-link.social-icons li a:after,
+.footer-link ul li a::before,
+.our-team-one .team-bg,
+.our-team-one ul li a:hover,
+
+.pagination > .active > a, 
+.pagination > .active > span, 
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus ,
+.pagination > li > a:hover, 
+.pagination > li > span:hover, 
+.pagination > li > a:focus, 
+.pagination > li > span:focus,
+ol.comment-list li.comment .reply a::before,
+.contact-one .form-control:focus + .spin,
+.cssload-box-loading::after,
+.is-fixed .header-center .navbar-toggle .icon-bar,
+.home-about-block-inner::after,
+.hover-box-effect:hover,
+.latest-blog-1 .wt-post-info .post-date , 
+.testimonial-6 .testimonial-pic:after,
+.testimonial-6 .testimonial-pic:before,
+.header-nav .nav > li .sub-menu,
+.wt-team-arc2 .team-social-icon li a:hover,
+.header-nav .nav > li .sub-menu li a::after,
+.notification-animate::after,
+table thead th,
+.social-tooltips-outer a .social-tooltips,
+.side-social-nav a .social-tooltip{
+	background-color:#d87c44;
+}
+
+.social-tooltips-outer .social-tooltips:before {
+	border-top-color:#d87c44;
+}
+.social-tooltip:after {
+    border-left-color: #d87c44;
+}
+
+/* Premery hex buttons bg color*/
+.site-button {
+	background-color:#d87c44;
+}
+.site-button:hover,
+.site-button:focus,
+.site-button:active{
+	background-color:#da4386;
+}
+
+.site-button:hover,
+.site-button:focus,
+.site-button:active,
+.our-team-one:hover .team-bg, .our-team-one.hover .team-bg{
+	background-color:#7d4c2e;
+}
+
+/*===================== 
+	Premery text color 
+=====================*/
+/* Premery text Hex color*/
+
+h1 a:hover, 
+h2 a:hover, 
+h3 a:hover, 
+h4 a:hover, 
+h5 a:hover, 
+h6 a:hover,
+.text-primary,
+ul.primary li::before,
+button.scroltop,
+
+.header-nav .nav > li:hover > a,
+.header-nav .nav > li .sub-menu li a:hover,
+.header-nav .nav > li .sub-menu li:hover > a,
+.header-nav .nav > li .mega-menu > li ul a:hover,
+
+.header-nav .nav > li.active > a, 
+.header-nav .nav > li.current-menu-item > a,
+.header-nav .nav li.has-child.nav-active > a,
+
+ol.comment-list li.comment .reply a,
+
+.masonry-filter > li.active a, 
+.masonry-filter > li a:hover, 
+.masonry-filter > li a:active, 
+.masonry-filter > li a:focus,
+.nav-dark.header-nav .nav > li .sub-menu li a:hover,
+.site-button-link::after,
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-prev:active,
+.owl-carousel .owl-nav button.owl-prev:focus,
+.owl-carousel .owl-nav button.owl-nextt:hover,
+.owl-carousel .owl-nav button.owl-next:active,
+.owl-carousel .owl-nav button.owl-next:focus,
+
+.our-team-two ul li a:hover,
+.testimonial-5 .testimonial-paragraph .fa-quote-left,
+.f-social-link.social-icons li a,
+.footer-link ul li a:after,
+.site-footer .widget-section > ul > li a:hover,
+.has-child .submenu-toogle,
+.nav-dark.header-nav .nav > li > a:hover, .nav-dark.header-nav .nav > li > a:active, .nav-dark.header-nav .nav > li > a:focus,
+.btn-filter-wrap li.btn-active, .btn-filter-wrap2 li.btn-active,
+.room-rent-section-outer.room-style-2 a:hover,
+.wt-tabs.vertical.bg-tabs .nav-tabs > li.active > a,
+.footer-dark .social-icons li a,
+.footer-light .social-icons li a,
+.side-social-nav a:hover,
+.extra-nav .extra-cell a:hover{
+	color:#d87c44;
+}
+
+.footer-dark .footer-top a:active, .footer-dark .footer-top a:focus, .footer-dark .footer-top a:hover{
+	color:#d87c44;
+}
+
+@media only screen and (max-width:991px) {
+.contact-slide-show.text-white,
+.bg-primary .site-search-btn {
+	color:#d87c44;
+}
+}
+
+/*===================== 
+	Premery border color 
+=====================*/
+
+/* Premery Hex border color*/
+.site-button:after,
+.site-button:before,
+.tp-thumbs-inner-wrapper .tp-thumb.selected:after,
+ol.comment-list li.comment .comment-body,
+.header-nav .nav > li .sub-menu,
+.wt-tabs.vertical.bg-tabs .nav-tabs > li.active > a,
+.wt-tabs .nav-tabs > li.active > a, .wt-tabs .nav-tabs > li.active > a:focus, .wt-tabs .nav-tabs > li.active > a:hover,
+.wt-tabs.vertical .nav-tabs li.active a{
+	border-color:#d87c44;
+}
+
+.site-button:hover:before,
+.site-button.hover:before,
+.site-button:hover:after,
+.site-button.hover:after {
+	border-color:#7d4c2e;
+}
+
+/*===================== 
+	Secondery bg hex color
+ =====================*/
+ 
+/* Secondery hex buttons bg color*/
+.site-button-secondry,
+.nav-dark.header-nav .nav > li .sub-menu,
+.nav-dark.header-nav .nav > li .mega-menu,
+.btn-half.site-button-secondry:hover{
+	background-color:#7d4c2e;
+}
+.site-button-secondry:hover,
+.site-button-secondry:focus,
+.site-button-secondry:active {
+	background-color:#582709;
+}
+
+.site-button-secondry:before,
+.site-button-secondry:before,
+.site-button-secondry:after,
+.site-button-secondry:after {
+  border-color: #7d4c2e;
+}
+
+.site-button-secondry:hover:before,
+.site-button-secondry.hover:before,
+.site-button-secondry:hover:after,
+.site-button-secondry.hover:after {
+  border-color: #582709;
+}
+
+
+/* Secondery hex text color*/
+.text-secondry {
+	color:#7d4c2e;
+}
+/* Secondery hex background color*/
+.bg-secondry {
+	background-color:#7d4c2e;
+}
+
+
+.notification-animate::before {
+	border: 5px solid rgba(216, 124, 68);
+}
+
+.room-rent-section-outer.room-style-2 a{color:#262423}
+.modal-title {color: #fff !important;}
+
+.footer-dark .footer-top {
+    background-color: #180e08;
+}
+.header-style-1 .is-fixed.color-fill .main-bar {
+    background: #180e08;
+}
+.footer-dark .footer-bottom {
+    background-color: #0d0804;
+}
+.header-nav .nav > li .sub-menu li:hover > a {
+    background-color: #180e08;
+}

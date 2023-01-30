@@ -1,0 +1,222 @@
+{% load static %}
+
+<header class="site-header header-style-1">
+    <div class="sticky-header main-bar-wraper">
+        <div class="main-bar bg-white p-t5">
+            <div class="container">
+                <div class="logo-header">
+                    <div class="logo-header-inner logo-header-one">
+                        <a href="index.html">
+                            <img src="images/logo-light.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <!-- NAV Toggle Button -->
+                <button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <!-- ETRA Nav -->
+                    <div class="extra-nav">
+                        <div class="extra-cell">
+                            <a href="#" class="contact-slide-show text-white"><i class="fa fa-envelope-o"></i></a>
+                        </div>    
+                        <div class="extra-cell">											
+                            <a href="#search" class=" text-white">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="extra-cell">   
+                            <a href="javascript:;" class="socialicon_show  text-white">
+                                <i class="fa fa-share-alt"></i>
+                            </a>
+                        </div>   	
+                    </div>
+                    <!-- ETRA Nav -->
+                       
+                    <!-- Social Nav -->
+                    <div class="social_hide"> 
+                        <div class="side-social-nav">
+                             <a href="javascript:void(0)" class="socialicon_close">&times;</a>
+                             <ul class="list-unstyled">
+                                <li><a href="javascript:void(0);" class="fa fa-facebook"><span class="social-tooltip">Facebook</span></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-rss"><span class="social-tooltip">Rss</span></a></li>                            
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin"><span class="social-tooltip">Linkedin</span></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-google-plus"><span class="social-tooltip">Google Plus</span></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-instagram"><span class="social-tooltip">Instagram</span></a></li>
+                            </ul>
+                        </div> 
+                    </div>
+
+                    <!-- Contact Nav -->                            
+                     <div class="contact-slide-hide"> 
+                        <div class="contact-nav">
+                             <a href="javascript:void(0)" class="contact_close">&times;</a>
+                             <div class="contact-nav-form p-a30">
+                                <form class="cons-contact-form" method="post" action="form-handler.php">
+                                    <div class="contact-one m-b30">
+                                    
+                                        <!-- TITLE START -->
+                                        <div class="section-head text-center">
+                                            <h2 class="m-b5" data-title="Form">Get In Touch</h2>
+                                        </div>
+                                        <!-- TITLE END -->  
+                                         <div class="row">
+                                             <div class="col-md-6">                               
+                                                <div class="form-group wt-inputicon-box">
+                                                    <input name="username" type="text" required class="form-control" placeholder="Name">
+                                                    <i class="fs-input-icon sl-icon-user"></i>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-6">
+                                                <div class="form-group wt-inputicon-box"> 
+                                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                    <i class="fs-input-icon sl-icon-envolope-letter"></i>
+                                                </div>                                                    
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="form-group wt-inputicon-box">
+                                                    <textarea name="message" rows="3" class="form-control " required placeholder="Message"></textarea>
+                                                    <i class="fs-input-icon sl-icon-envolope"></i>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-12">
+                                                <div class="text-center">
+                                                    <button name="submit" type="submit" value="Submit" class="btn-half site-button button-lg m-b15">
+                                                            <span>Submit</span><em></em>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </form>
+                                <div class="contact-info text-black m-b30">
+                                    <!-- TITLE START -->
+                                    <div class="section-head text-center">
+                                        <h2 class="m-b5" data-title="Info">Contact Info</h2>
+                                    </div>
+                                    <!-- TITLE END -->
+                                    <ul> 
+                                        <li>                           
+                                            <div class="wt-icon-box-wraper center p-b40">
+                                                <div class="icon-md m-b20"><i class="sl-icon-phone"></i></div>
+                                                <div class="icon-content">
+                                                    <h5 class="m-t0 font-weight-500">Phone number</h5>
+                                                    <p>(456) 789 10 12</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li>
+                                            <div class="wt-icon-box-wraper center p-b40">
+                                                <div class="icon-md m-b20"><i class="sl-icon-envolope-letter"></i></div>
+                                                <div class="icon-content">
+                                                    <h5 class="m-t0 font-weight-500">Email address</h5>
+                                                    <p>demo@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li>
+                                            <div class="wt-icon-box-wraper center">
+                                                <div class="icon-md m-b20"><i class="sl-icon-map"></i></div>
+                                                <div class="icon-content">
+                                                    <h5 class="m-t0 font-weight-500">Address info</h5>
+                                                    <p>55/11 Land Street, Modern New Yourk City, USA</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>    
+                                </div>                                        
+                             </div>
+                        </div> 
+                    </div>                               
+                    <!-- SITE Search -->
+                    <div id="search"> 
+                        <span class="close"></span>
+                        <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                            <div class="input-group">
+                                <input value="" name="q" type="search" placeholder="Type to search"/>
+                                <span class="input-group-btn"><button type="button" class="search-btn"><i class="fa fa-search"></i></button></span>
+                            </div>   
+                        </form>
+                    </div>                                                                                                          
+                    <!-- MAIN Vav -->
+                    <div class="header-nav navbar-collapse collapse">
+                        <ul class=" nav navbar-nav">
+                            <li class="active">
+                                <a href="javascript:;">Home</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="index.html">Home-1</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-2.html">Home-2</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-3.html">Home-3</a>
+                                    </li>                                            
+                
+                                </ul>                                                    
+                            </li>
+                            <li>
+                                <a href="javascript:;">Post detail</a>
+                                <ul class="sub-menu">
+                                    <li><a href="post-image.html">Post Image</a></li>
+                                    <li><a href="post-gallery.html">Post Gallery</a></li>
+                                    <li><a href="post-video.html">Post Video</a></li>
+                                    <li><a href="post-right-sidebar.html">Post Right Sidebar</a></li>                                        
+                                </ul>                                    
+                            </li>                                         
+                            <li class="submenu-direction">
+                                <a href="javascript:;">Pages</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="javascript:;">Blog</a>
+                                        <ul class="sub-menu has-child">
+                                            <li><a href="news-grid.html">Blog Grid</a></li>
+                                            <li><a href="news-listing.html">Blog Listing</a></li>
+                                            <li><a href="news-masonry.html">Blog Masonry</a></li>
+                                        </ul>
+                                    </li>                                        
+                                    <li>
+                                        <a href="about-1.html">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-1.html">Contact us</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">Projects</a>
+                                <ul class="sub-menu">
+                                    <li><a href="work-grid.html">Project Grid</a></li>
+                                    <li><a href="work-masonry.html">Project Masonry</a></li>
+                                    <li><a href="work-carousel.html">Project Carousel</a></li>
+                                    <li><a href="project-detail.html">Project Detail</a></li>                                        
+                                </ul>
+                            </li>
+                            <li class="submenu-direction">
+                                <a href="javascript:;">Shortcodes</a>
+                                <ul class="sub-menu">
+                                    <li><a href="accordian.html">Accordian</a></li>
+                                    <li><a href="button.html">Button</a></li>
+                                    <li><a href="icon_box.html">Icon box style</a></li>
+                                    <li><a href="list_group.html">List group</a></li>
+                                    <li><a href="modal_popup.html">Modal popup</a></li>
+                                    <li><a href="tabs.html">Tabs</a></li>
+                                    <li><a href="table.html">Table</a></li>
+                                    <li><a href="video.html">Video  </a></li>
+                                    <li><a href="icon-font.html">Icon Font </a></li> 
+                                </ul>                                    
+                            </li>                                
+                        </ul>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+</header>

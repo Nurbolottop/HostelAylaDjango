@@ -1,0 +1,121 @@
+.styleswitcher .switcher-title {
+	text-transform: uppercase;
+	font-weight: 800;
+	margin: 10px 5px;
+	font-family: 'Open Sans', sans-serif
+}
+.styleswitcher {
+	position: fixed;
+	left: -170px;
+	top: 150px;
+	width: 170px;
+	height: 180px;
+	padding: 15px;
+	z-index: 996;
+	background-color: #fff;
+	box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1)
+}
+.styleswitcher-inner {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+	overflow: auto
+}
+.styleswitcher .switcher-btn-bx {
+	position: absolute;
+	right: -40px;
+	top: 140px;
+	box-shadow: 7px 0 5px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 7px 0 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 7px 0 5px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 7px 0 5px rgba(0, 0, 0, 0.1)
+}
+.switch-btn {
+	background: #fff none repeat scroll 0 0;
+	box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+	color: #333;
+	cursor: pointer;
+	display: block;
+	font-size: 21px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 40px
+}
+.layout-view, .nav-view, .nav-width, .header-view, .color-skins, .pattern-switcher, .background-switcher {
+	margin: 0;
+	padding: 0
+}
+.layout-view li,
+.nav-view li,
+.nav-width li,
+.header-view li {
+    display: inline-block;
+	padding:5px 10px;
+	margin:5px -2px;
+	font-weight:600;
+	cursor:pointer;
+	min-width:90px;
+	text-align:center;
+	font-size:13px;
+	background-color:#CECECE;
+}
+.layout-view li.active,
+.nav-view li.active,
+.nav-width li.active,
+.header-view li.active {
+	color:#fff;
+	background-color:#000;
+}
+
+.color-skins li {
+	display: inline-block;
+	list-style: outside none none;
+	margin: 0 4px 10px 4px;
+	cursor: pointer
+}
+.color-skins li a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #999
+}
+.color-skins li .skin-1 {
+	background-color: #c19b76 
+}
+.color-skins li .skin-2 {
+	background-color: #eab248 
+}
+.color-skins li .skin-3 {
+	background-color: #9badc9 
+}
+.color-skins li .skin-4 {
+	background-color: #d87c44 
+}
+.color-skins li .skin-5 {
+	background-color: #82c47b 
+}
+.color-skins li .skin-6 {
+	background-color: #50aab2
+}
+
+.background-switcher li {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin: 0 4px 10px 4px;
+	cursor: pointer
+}
+.pattern-switcher li {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin: 0 4px 10px 4px;
+	cursor: pointer
+}
