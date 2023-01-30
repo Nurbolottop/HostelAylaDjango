@@ -47,3 +47,10 @@ class Contact(models.Model):
     class Meta:
         verbose_name = "Настройка Контакта"
         verbose_name_plural = "Настройки Контактов"
+        
+class BackroundContact(models.Model):
+    image = models.ImageField(upload_to="backround/", verbose_name="Задний фон")
+    
+    class Meta:
+        verbose_name = "Задний фон страницы <<Контакты>>"
+        verbose_name_plural = "Задний фон страницы <<Контакты>>"

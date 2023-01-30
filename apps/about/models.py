@@ -17,3 +17,10 @@ class About(models.Model):
         verbose_name = "Настройка О нас"
         verbose_name_plural = "Настройки О нас"
         
+class BackroundAbout(models.Model):
+    image = models.ImageField(upload_to="backround/", verbose_name="Задний фон")
+    
+    class Meta:
+        verbose_name = "Задний фон страницы <<О нас>>"
+        verbose_name_plural = "Задний фон страницы <<О нас>>"
+        

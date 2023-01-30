@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'apps.settings',
     'apps.contact',
     'apps.about',
+    'apps.rooms',
+    
     
     
     

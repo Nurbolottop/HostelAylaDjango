@@ -34,3 +34,4 @@ class Slide(models.Model):
     class Meta:
         verbose_name = "Настройка слайда"
         verbose_name_plural = "Настройки слайда"
+        
