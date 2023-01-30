@@ -21,3 +21,16 @@ class Setting(models.Model):
     class Meta:
         verbose_name = "Настройка сайта"
         verbose_name_plural = "Настройки сайта"
+        
+        
+class Slide(models.Model):
+    title = models.CharField(max_length=255,verbose_name="Название слайда")
+    descriptions = models.TextField(verbose_name="Описание для слайда")
+    image = models.ImageField(upload_to="slide/", verbose_name="Фотография для слайда")
+
+    def __str__(self):
+        return self.title 
+
+    class Meta:
+        verbose_name = "Настройка слайда"
+        verbose_name_plural = "Настройки слайда"

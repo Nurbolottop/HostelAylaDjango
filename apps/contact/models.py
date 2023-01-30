@@ -24,8 +24,8 @@ class Contact(models.Model):
         verbose_name="Рабочое время",
         blank = True, null = True
     )
-    address_url = models.URLField(
-        verbose_name="Ссылка на адрес",
+    youtube = models.URLField(
+        verbose_name="Ссылка на Youtube",
         blank = True, null = True
     )
     facebook = models.URLField(
@@ -38,10 +38,6 @@ class Contact(models.Model):
     )
     whatsapp = models.URLField(
         verbose_name="Ссылка на WhatsApp",
-        blank = True, null = True
-    )
-    telegram = models.URLField(
-        verbose_name="Ссылка на Telegram",
         blank = True, null = True
     )
 

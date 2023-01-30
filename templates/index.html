@@ -1,4 +1,9 @@
 {% extends 'homepage.html'%}
+{% load static %}
+{% block content%}
+
+	<div class="page-wraper"> 
+
         <!-- HEADER START -->
         {% include 'include/header.html'%}
         <!-- HEADER END -->
@@ -12,405 +17,10 @@
                 <div id="welcome" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
                     <ul>	
                         <!-- SLIDE 1 -->
-                        <li data-index="rs-901" 
-                        data-transition="fadethroughdark" 
-                        data-slotamount="default" 
-                        data-hideafterloop="0" 
-                        data-hideslideonmobile="off"  
-                        data-easein="default" 
-                        data-easeout="default" 
-                        data-masterspeed="default"  
-                        data-thumb="images/main-slider/slider1/slide1.jpg"  
-                        data-rotate="0"  
-                        data-fstransition="fade" 
-                        data-fsmasterspeed="300" 
-                        data-fsslotamount="7" 
-                        data-saveperformance="off"  
-                        data-title="Click" 
-                        data-param1="" 
-                        data-param2="" 
-                        data-param3="" 
-                        data-param4="" 
-                        data-param5="" 
-                        data-param6="" 
-                        data-param7="" 
-                        data-param8="" 
-                        data-param9="" 
-                        data-param10="" 
-                        data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slide1.jpg"  alt=""  data-lazyload="images/main-slider/slider1/slide1.jpg" data-bgposition="center center" 
-                            data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 0 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " 
-                            id="slide-901-layer-0" 
-                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                            data-width="full"
-                            data-height="full"
-                            data-whitespace="nowrap"
-                            data-type="shape" 
-                            data-basealign="slide" 
-                            data-responsive_offset="off" 
-                            data-responsive="off"
-                            data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
-                            </div>
-                           
-                            <!-- LAYER NR. 1 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" 
-                            id="slide-901-layer-1" 
-                            data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" 
-                            data-y="['top','top','top','top']" data-voffset="['250','250','250','250']"  
-                            data-fontsize="['46','46','46','32']"
-                            data-lineheight="['56','56','56','50']"
-                            data-width="['0','0','0','0']"
-                            data-height="['','','','']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                        
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                        
-                            style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:#fff;
-                            border-width:0px;">
-                            <div class=" rev-slider-style-1"></div>
-                            </div>
-                            
-                            
-                                                        
-                            <!-- LAYER NR. 2 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" 
-                            id="slide-901-layer-2" 
-                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
-                            data-y="['top','top','top','top']" data-voffset="['270','270','270','270']"  
-                            data-fontsize="['56','56','38','28']"
-                            data-lineheight="['66','66','48','38']"
-                            data-width="['700','700','96%','96%']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                        
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[5,5,5,5]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[20,20,20,20]"
-                        
-                            style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:#fff;
-                            border-width:0px;">
-                            <div style="font-family: 'DM Serif Text', serif;text-transform:uppercase;">
-                                <span class="text-primary"> Discover a</span><br>
-                                hotel that defines a new dimension of luxury
-                            </div>
-                            
-                            </div>
-                            
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption tp-resizeme" 	
-                            id="slide-901-layer-3"						
-                            data-x="['right','right','right','left']" data-hoffset="['40','40','40','40']" 
-                            data-y="['top','top','top','top']" data-voffset="['400','570','570','180']" 
-                            data-fontsize="['400','400','400','80']"
-                            data-lineheight="['66','66','48','38']"                             
-                            data-width="['800','800','800','800']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                            
-                            data-type="text" 
-                            data-responsive_offset="on"
-                            data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['right','right','right','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                           style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:rgba(0,0,0,0);">
-                            <span class="slider-text-outline" style="font-family: 'Roboto', sans-serif;text-transform:uppercase;">01</span>
-                            </div>  
-                            
-                            <!-- LAYER NR. 4 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" 	
-                            id="slide-901-layer-4"						
-                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
-    
-                            data-y="['top','top','top','top']" data-voffset="['570','570','520','460']"  
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                            
-                            data-type="text" 
-                            data-responsive_offset="on"
-                            data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                            style="z-index:13; text-transform:uppercase;">
-                            <a href="javascript:;" class="site-button slider-btn-left btn-half"><span> More About</span><em></em></a>
-                            </div>
-
-                             
-                        
-     
-                        </li>
-                        
-                        
-                        <!-- SLIDE 2 -->
-                        <li data-index="rs-902" 
-                        data-transition="fadethroughdark" 
-                        data-slotamount="default" 
-                        data-hideafterloop="0" 
-                        data-hideslideonmobile="off"  
-                        data-easein="default" 
-                        data-easeout="default" 
-                        data-masterspeed="default"  
-                        data-thumb="images/main-slider/slider1/slide2.jpg"  
-                        data-rotate="0"  
-                        data-fstransition="fade" 
-                        data-fsmasterspeed="300" 
-                        data-fsslotamount="7" 
-                        data-saveperformance="off"  
-                        data-title="Click" 
-                        data-param1="" 
-                        data-param2="" 
-                        data-param3="" 
-                        data-param4="" 
-                        data-param5="" 
-                        data-param6="" 
-                        data-param7="" 
-                        data-param8="" 
-                        data-param9="" 
-                        data-param10="" 
-                        data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slide2.jpg"  alt=""  data-lazyload="images/main-slider/slider1/slide2.jpg" data-bgposition="center center" 
-                            data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 0 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " 
-                            id="slide-902-layer-0" 
-                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-                            data-width="full"
-                            data-height="full"
-                            data-whitespace="nowrap"
-                            data-type="shape" 
-                            data-basealign="slide" 
-                            data-responsive_offset="off" 
-                            data-responsive="off"
-                            data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
-                            </div>
-                           
-                            <!-- LAYER NR. 1 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" 
-                            id="slide-902-layer-1" 
-                            data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" 
-                            data-y="['top','top','top','top']" data-voffset="['250','250','250','250']"  
-                            data-fontsize="['46','46','46','32']"
-                            data-lineheight="['56','56','56','50']"
-                            data-width="['0','0','0','0']"
-                            data-height="['','','','']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                        
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                        
-                            style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:#fff;
-                            border-width:0px;">
-                            <div class=" rev-slider-style-1"></div>
-                            </div>
-                            
-                            
-                                                        
-                            <!-- LAYER NR. 2 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" 
-                            id="slide-902-layer-2" 
-                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
-                            data-y="['top','top','top','top']" data-voffset="['270','270','270','270']"  
-                            data-fontsize="['56','56','38','28']"
-                            data-lineheight="['66','66','48','38']"
-                            data-width="['700','700','96%','96%']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                        
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[5,5,5,5]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[20,20,20,20]"
-                        
-                            style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:#fff;
-                            border-width:0px;">
-                            <div style="font-family: 'DM Serif Text', serif;text-transform:uppercase;">
-                                <span class="text-primary">Hilton</span><br>
-                               Garden Inn. Everything. Right where you need it.
-                            </div>
-                            
-                            </div>
-                            
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption tp-resizeme" 	
-                            id="slide-902-layer-3"						
-                            data-x="['right','right','right','left']" data-hoffset="['40','40','40','40']" 
-                            data-y="['top','top','top','top']" data-voffset="['400','570','570','180']" 
-                            data-fontsize="['400','400','400','80']"
-                            data-lineheight="['66','66','48','38']"                             
-                            data-width="['800','800','800','800']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                            
-                            data-type="text" 
-                            data-responsive_offset="on"
-                            data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['right','right','right','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                           style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:rgba(0,0,0,0);">
-                            <span class="slider-text-outline" style="font-family: 'Roboto', sans-serif;text-transform:uppercase;">02</span>
-                            </div>  
-                            
-                            <!-- LAYER NR. 4 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" 	
-                            id="slide-902-layer-4"						
-                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
-    
-                            data-y="['top','top','top','top']" data-voffset="['570','570','520','460']"  
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                            
-                            data-type="text" 
-                            data-responsive_offset="on"
-                            data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                            style="z-index:13; text-transform:uppercase;">
-                            <a href="javascript:;" class="site-button slider-btn-left btn-half"><span> More About</span><em></em></a>
-                            </div>
-
-                        </li>                                          
-                                         
- 
+                        {% for slide in slide%}
                         <!-- SLIDE 3 -->
-                        <li data-index="rs-903" 
-                        data-transition="fadethroughdark" 
-                        data-slotamount="default" 
-                        data-hideafterloop="0" 
-                        data-hideslideonmobile="off"  
-                        data-easein="default" 
-                        data-easeout="default" 
-                        data-masterspeed="default"  
-                        data-thumb="images/main-slider/slider1/slide3.jpg"  
-                        data-rotate="0"  
-                        data-fstransition="fade" 
-                        data-fsmasterspeed="300" 
-                        data-fsslotamount="7" 
-                        data-saveperformance="off"  
-                        data-title="Click" 
-                        data-param1="" 
-                        data-param2="" 
-                        data-param3="" 
-                        data-param4="" 
-                        data-param5="" 
-                        data-param6="" 
-                        data-param7="" 
-                        data-param8="" 
-                        data-param9="" 
-                        data-param10="" 
-                        data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slide3.jpg"  alt=""  data-lazyload="images/main-slider/slider1/slide3.jpg" data-bgposition="center center" 
+                        <li >
+                            <img src="{{slide.image.url}}"  alt=""  data-lazyload="{{slide.image.url}}" data-bgposition="center center" 
                             data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
                             <!-- LAYER NR. 0 [ for overlay ] -->
@@ -500,41 +110,13 @@
                             color:#fff;
                             border-width:0px;">
                             <div style="font-family: 'DM Serif Text', serif;text-transform:uppercase;">
-                                <span class="text-primary"> Whitelaw </span><br>
-                                 Hotel. Clean Sheets, Hot Water, Stiff Drinks.
+                                <span class="text-primary"> {{slide.title}} </span><br>
+                                 {{slide.descriptions}}
                             </div>
                             
                             </div>
                             
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption tp-resizeme" 	
-                            id="slide-903-layer-3"						
-                            data-x="['right','right','right','left']" data-hoffset="['40','40','40','40']" 
-                            data-y="['top','top','top','top']" data-voffset="['400','570','570','180']" 
-                            data-fontsize="['400','400','400','80']"
-                            data-lineheight="['66','66','48','38']"                             
-                            data-width="['800','800','800','800']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-                            
-                            data-type="text" 
-                            data-responsive_offset="on"
-                            data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]'
-                            data-textAlign="['right','right','right','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-                            
-                           style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 900;
-                            color:rgba(0,0,0,0);">
-                            <span class="slider-text-outline" style="font-family: 'Roboto', sans-serif;text-transform:uppercase;">03</span>
-                            </div>  
+                           
                             
                             <!-- LAYER NR. 4 [ for see all service botton ] -->
                             <div class="tp-caption tp-resizeme" 	
@@ -565,7 +147,7 @@
 
      
                         </li> 
-                                                    
+                        {% endfor %}                       
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	
                 </div>
@@ -722,33 +304,33 @@
                             </div>
                             
                         	<div class="col-md-6 col-sm-12">
-                            	<div class="home-about-block-outer bg-repeat bg-white" style="background-image:url(images/background/bg-dot.jpg);">
+                            	<div class="home-about-block-outer bg-repeat bg-white" style="background-image:url({% static 'images/background/bg-dot.jpg' %});">
                                 	<div class="home-about-block-inner">
                                         <div class="home-about-slider owl-carousel owl-btn-vertical-center">
                                         
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="images/about/pic1.jpg" alt="">
+                                                    <img src="{% static 'images/about/pic1.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="images/about/pic2.jpg" alt="">
+                                                    <img src="{% static 'images/about/pic2.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="images/about/pic3.jpg" alt="">
+                                                    <img src="{% static 'images/about/pic3.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="images/about/pic4.jpg" alt="">
+                                                    <img src="{% static 'images/about/pic4.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="images/about/pic5.jpg" alt="">
+                                                    <img src="{% static 'images/about/pic5.jpg' %}" alt="">
                                                 </div>
                                             </div>                                                                                                                                                                                
                                             
@@ -797,7 +379,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic1.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic1.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Classic Balcony Room</h3>
                                             </div>
@@ -822,7 +404,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic2.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic2.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Superior Double Room</h3>
                                             </div>
@@ -847,7 +429,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic3.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic3.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Balcony Double Room</h3>
                                             </div>
@@ -872,7 +454,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic4.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic4.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Delux Double Room</h3>
                                             </div>
@@ -897,7 +479,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic5.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic5.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Classic Balcony Room</h3>
                                             </div>
@@ -922,7 +504,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic6.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic6.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Superior Double Room</h3>
                                             </div>
@@ -947,7 +529,7 @@
                                     <div class="room-rent-section">
                                         <div class="rooms-pic-section">
                                             <div class="wt-media">
-                                                <img src="images/rooms/pic7.jpg" alt="">
+                                                <img src="{% static 'images/rooms/pic7.jpg' %}" alt="">
                                                 <div class="overlay-bx-3"></div>
                                                 <h3 class="m-b0 wt-title">Delux Double Room</h3>
                                             </div>
@@ -999,7 +581,7 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-post latest-blog-1 date-style-2">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:;"><img src="images/blog/default/thum4.jpg" alt=""></a>
+                                        <a href="javascript:;"><img src="{% static 'images/blog/default/thum4.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
@@ -1008,7 +590,7 @@
                                                 <ul class="clearfix">
                                                     <li class="post-author">
                                                         <div class="post-author-pic">
-                                                            <span><img src="images/testimonials/pic1.jpg" alt=""></span>
+                                                            <span><img src="{% static 'images/testimonials/pic1.jpg' %}" alt=""></span>
                                                             <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
                                                         </div> 
                                                     </li>
@@ -1035,7 +617,7 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-post latest-blog-1 date-style-2">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:;"><img src="images/blog/default/thum7.jpg" alt=""></a>
+                                        <a href="javascript:;"><img src="{% static 'images/blog/default/thum7.jpg' %}" alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
@@ -1044,7 +626,7 @@
                                                 <ul class="clearfix">
                                                     <li class="post-author">
                                                         <div class="post-author-pic">
-                                                            <span><img src="images/testimonials/pic2.jpg" alt=""></span>
+                                                            <span><img src="{% static 'images/testimonials/pic2.jpg' %}" alt=""></span>
                                                             <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
                                                         </div> 
                                                     </li>
@@ -1079,10 +661,10 @@
             <div class="section-full bg-change-section overlay-wraper p-tb80"   data-toggle="tab-hover">
                 <div class="overlay-main bg-black opacity-06"></div>
                 <div class="bg-changer">
-                    <div  class=" section-bg active" style="background-image:url(images/background/room.jpg)"></div>
-                    <div  class="section-bg" style="background-image:url(images/background/appartment.jpg)"></div>
-                    <div  class="section-bg" style="background-image:url(images/background/architecture.jpg)"></div> 
-                    <div  class="section-bg" style="background-image:url(images/background/interior.jpg)"></div> 
+                    <div  class=" section-bg active" style="background-image:url({% static 'images/background/room.jpg' %})"></div>
+                    <div  class="section-bg" style="background-image:url({% static 'images/background/appartment.jpg' %})"></div>
+                    <div  class="section-bg" style="background-image:url({% static 'images/background/architecture.jpg' %})"></div> 
+                    <div  class="section-bg" style="background-image:url({% static 'images/background/interior.jpg' %})"></div> 
                 </div>
                                           
                 <div class="container">
@@ -1266,7 +848,7 @@
             <!-- OUR SERVICES END -->            
                      
             <!-- TESTIMONIALS SECTION START -->
-            <div class="section-full p-t80 p-b80  overlay-wraper" data-stellar-background-ratio="0.5" style="background-image:url(images/background/bg-2.jpg);">
+            <div class="section-full p-t80 p-b80  overlay-wraper" data-stellar-background-ratio="0.5" style="background-image:url({% static 'images/background/bg-2.jpg' %});">
             <div class="overlay-main opacity-05 bg-black"></div>
  
                 <div class="container">
@@ -1288,7 +870,7 @@
                                     <div class="testimonial-6">
                                         <div class="testimonial-pic-block"> 
                                             <div class="testimonial-pic">
-                                                <img src="images/testimonials/pic1.jpg" width="132" height="132" alt="">
+                                                <img src="{% static 'images/testimonials/pic1.jpg' %}" width="132" height="132" alt="">
                                             </div>
                                         </div>
                                         <div class="testimonial-text clearfix text-white">
@@ -1308,7 +890,7 @@
                                     <div class="testimonial-6">
                                         <div class="testimonial-pic-block"> 
                                             <div class="testimonial-pic">
-                                                <img src="images/testimonials/pic2.jpg" width="132" height="132" alt="">
+                                                <img src="{% static 'images/testimonials/pic2.jpg' %}" width="132" height="132" alt="">
                                             </div>
                                         </div>
                                         <div class="testimonial-text clearfix text-white">
@@ -1328,7 +910,7 @@
                                     <div class="testimonial-6">
                                         <div class="testimonial-pic-block"> 
                                             <div class="testimonial-pic">
-                                                <img src="images/testimonials/pic3.jpg" width="132" height="132" alt="">
+                                                <img src="{% static 'images/testimonials/pic3.jpg' %}" width="132" height="132" alt="">
                                             </div>
                                         </div>
                                         <div class="testimonial-text clearfix text-white">
@@ -1348,7 +930,7 @@
                                     <div class="testimonial-6">
                                         <div class="testimonial-pic-block"> 
                                             <div class="testimonial-pic">
-                                                <img src="images/testimonials/pic4.jpg" width="132" height="132" alt="">
+                                                <img src="{% static 'images/testimonials/pic4.jpg' %}" width="132" height="132" alt="">
                                             </div>
                                         </div>
                                         <div class="testimonial-text clearfix text-white">
@@ -1388,42 +970,42 @@
                     	<div class="client-grid grid-4">
                         	<div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w1.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w1.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w2.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w2.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w3.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w3.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w4.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w4.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w5.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w5.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w6.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w6.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w1.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w1.png' %}" alt=""> 
                                 </a>
                             </div>
                             <div class="col-xs-12 col-sm-4">
                             	<a href="#" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="Partner Logo">
-                               	<img src="images/client-logo/w2.png" alt=""> 
+                               	<img src="{% static 'images/client-logo/w2.png' %}" alt=""> 
                                 </a>
                             </div>
                            
@@ -1455,7 +1037,7 @@
                             	<div class="wt-team-arc2">
                                 	
                                     <div class="wt-media">
-                                        <img src="images/our-team1/pic1.jpg" alt="">
+                                        <img src="{% static 'images/our-team1/pic1.jpg' %}" alt="">
 										<div class="team-social-center">
                                             <ul class="team-social-icon">
                                                 <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
@@ -1479,7 +1061,7 @@
                             	<div class="wt-team-arc2">
                                 	
                                     <div class="wt-media">
-                                        <img src="images/our-team1/pic2.jpg" alt="">
+                                        <img src="{% static 'images/our-team1/pic2.jpg' %}" alt="">
                                         <div class="team-social-center">
                                             <ul class="team-social-icon">
                                                 <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
@@ -1503,7 +1085,7 @@
                             	<div class="wt-team-arc2">
                                 	
                                     <div class="wt-media">
-                                        <img src="images/our-team1/pic3.jpg" alt="">
+                                        <img src="{% static 'images/our-team1/pic3.jpg' %}" alt="">
                                         <div class="team-social-center">
                                             <ul class="team-social-icon">
                                                 <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
@@ -1542,4 +1124,24 @@
 
 
         <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+        
+     
+    </div>
+ 
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
 
+<!-- JAVASCRIPT  FILES ========================================= --> 
+{% endblock%}

@@ -6,8 +6,8 @@
             <div class="container">
                 <div class="logo-header">
                     <div class="logo-header-inner logo-header-one">
-                        <a href="index.html">
-                            <img src="images/logo-light.png" alt="" />
+                        <a href="{% url 'index'%}">
+                            <img src="{{setting.logo.url}}" width = '100px' alt="" />
                         </a>
                     </div>
                 </div>
@@ -41,11 +41,24 @@
                         <div class="side-social-nav">
                              <a href="javascript:void(0)" class="socialicon_close">&times;</a>
                              <ul class="list-unstyled">
-                                <li><a href="javascript:void(0);" class="fa fa-facebook"><span class="social-tooltip">Facebook</span></a></li>
-                                <li><a href="javascript:void(0);" class="fa fa-rss"><span class="social-tooltip">Rss</span></a></li>                            
-                                <li><a href="javascript:void(0);" class="fa fa-linkedin"><span class="social-tooltip">Linkedin</span></a></li>
-                                <li><a href="javascript:void(0);" class="fa fa-google-plus"><span class="social-tooltip">Google Plus</span></a></li>
-                                <li><a href="javascript:void(0);" class="fa fa-instagram"><span class="social-tooltip">Instagram</span></a></li>
+                                {%if contact.facebook%}
+                                <li><a href="{{contact.facebook}}" class="fa fa-facebook"><span class="social-tooltip">Facebook</span></a></li>
+                                {%endif%}
+
+                                {%if contact.instagram%}
+                                <li><a href="{{contact.instagram}}" class="fa fa-instagram"><span class="social-tooltip">Instagram</span></a></li>
+                                {%endif%}
+
+                                {%if contact.whatsapp%}
+                                <li><a href="{{contact.whatsapp}}" class="fa fa-whatsapp"><span class="social-tooltip">Whatsapp</span></a></li>   
+                                {%endif%}
+                                
+                                {%if contact.youtube%}
+                                <li><a href="{{contact.youtube}}" class="fa fa-youtube"><span class="social-tooltip">Youtube</span></a></li>
+                                {%endif%}
+
+                               
+
                             </ul>
                         </div> 
                     </div>
@@ -60,32 +73,32 @@
                                     
                                         <!-- TITLE START -->
                                         <div class="section-head text-center">
-                                            <h2 class="m-b5" data-title="Form">Get In Touch</h2>
+                                            <h2 class="m-b5" data-title="{{setting.title}}">Связаться</h2>
                                         </div>
                                         <!-- TITLE END -->  
                                          <div class="row">
                                              <div class="col-md-6">                               
                                                 <div class="form-group wt-inputicon-box">
-                                                    <input name="username" type="text" required class="form-control" placeholder="Name">
+                                                    <input name="username" type="text" required class="form-control" placeholder="Имя">
                                                     <i class="fs-input-icon sl-icon-user"></i>
                                                 </div>
                                             </div>
                                              <div class="col-md-6">
                                                 <div class="form-group wt-inputicon-box"> 
-                                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                    <input name="email" type="text" class="form-control" required placeholder="Почта">
                                                     <i class="fs-input-icon sl-icon-envolope-letter"></i>
                                                 </div>                                                    
                                             </div>
                                              <div class="col-md-12">
                                                 <div class="form-group wt-inputicon-box">
-                                                    <textarea name="message" rows="3" class="form-control " required placeholder="Message"></textarea>
+                                                    <textarea name="message" rows="3" class="form-control " required placeholder="Сообщение"></textarea>
                                                     <i class="fs-input-icon sl-icon-envolope"></i>
                                                 </div>
                                             </div>
                                              <div class="col-md-12">
                                                 <div class="text-center">
                                                     <button name="submit" type="submit" value="Submit" class="btn-half site-button button-lg m-b15">
-                                                            <span>Submit</span><em></em>
+                                                            <span>Отправить</span><em></em>
                                                     </button>
                                                 </div>
                                             </div>
@@ -95,7 +108,7 @@
                                 <div class="contact-info text-black m-b30">
                                     <!-- TITLE START -->
                                     <div class="section-head text-center">
-                                        <h2 class="m-b5" data-title="Info">Contact Info</h2>
+                                        <h2 class="m-b5" data-title="Info">Контактная информация</h2>
                                     </div>
                                     <!-- TITLE END -->
                                     <ul> 
@@ -103,8 +116,8 @@
                                             <div class="wt-icon-box-wraper center p-b40">
                                                 <div class="icon-md m-b20"><i class="sl-icon-phone"></i></div>
                                                 <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Phone number</h5>
-                                                    <p>(456) 789 10 12</p>
+                                                    <h5 class="m-t0 font-weight-500">Тел.ном</h5>
+                                                    <p>{{contact.phone}}</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -113,8 +126,8 @@
                                             <div class="wt-icon-box-wraper center p-b40">
                                                 <div class="icon-md m-b20"><i class="sl-icon-envolope-letter"></i></div>
                                                 <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Email address</h5>
-                                                    <p>demo@gmail.com</p>
+                                                    <h5 class="m-t0 font-weight-500">Почта</h5>
+                                                    <p>{{contact.email}}</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -123,8 +136,8 @@
                                             <div class="wt-icon-box-wraper center">
                                                 <div class="icon-md m-b20"><i class="sl-icon-map"></i></div>
                                                 <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Address info</h5>
-                                                    <p>55/11 Land Street, Modern New Yourk City, USA</p>
+                                                    <h5 class="m-t0 font-weight-500">Адрес</h5>
+                                                    <p>{{contact.address}}</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -148,49 +161,32 @@
                     <div class="header-nav navbar-collapse collapse">
                         <ul class=" nav navbar-nav">
                             <li class="active">
-                                <a href="javascript:;">Home</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="index.html">Home-1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Home-2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Home-3</a>
-                                    </li>                                            
-                
-                                </ul>                                                    
+                                <a href="javascript:;">Главная страница</a>
+                                                                                  
                             </li>
                             <li>
-                                <a href="javascript:;">Post detail</a>
-                                <ul class="sub-menu">
-                                    <li><a href="post-image.html">Post Image</a></li>
-                                    <li><a href="post-gallery.html">Post Gallery</a></li>
-                                    <li><a href="post-video.html">Post Video</a></li>
-                                    <li><a href="post-right-sidebar.html">Post Right Sidebar</a></li>                                        
-                                </ul>                                    
+                                <a href="javascript:;">Блог</a>
+                                                               
                             </li>                                         
                             <li class="submenu-direction">
-                                <a href="javascript:;">Pages</a>
+                                <a >Страницы</a>
                                 <ul class="sub-menu">
+                                                                          
                                     <li>
-                                        <a href="javascript:;">Blog</a>
-                                        <ul class="sub-menu has-child">
-                                            <li><a href="news-grid.html">Blog Grid</a></li>
-                                            <li><a href="news-listing.html">Blog Listing</a></li>
-                                            <li><a href="news-masonry.html">Blog Masonry</a></li>
-                                        </ul>
-                                    </li>                                        
-                                    <li>
-                                        <a href="about-1.html">About us</a>
+                                        <a href="about-1.html">О нас</a>
                                     </li>
                                     <li>
-                                        <a href="contact-1.html">Contact us</a>
+                                        <a href="{% url 'contact'%}">Контакты</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-1.html">Наша команда</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-1.html">Галерея</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            {% comment %} <li>
                                 <a href="javascript:;">Projects</a>
                                 <ul class="sub-menu">
                                     <li><a href="work-grid.html">Project Grid</a></li>
@@ -212,7 +208,7 @@
                                     <li><a href="video.html">Video  </a></li>
                                     <li><a href="icon-font.html">Icon Font </a></li> 
                                 </ul>                                    
-                            </li>                                
+                            </li>                                 {% endcomment %}
                         </ul>
                     </div>
                     
