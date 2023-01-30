@@ -240,16 +240,16 @@
                     		<div class="col-md-6 col-sm-12 text-black">
                                 <!-- TITLE START -->
                                 <div class="section-head text-left">
-                                    <h2 class=" m-b5" data-title="About">About sharan</h2>
+                                    <h2 class=" m-b5" data-title="О {{setting.title}}">О {{setting.title}}</h2>
                                     <div class="wt-separator-outer">
                                         <div class="wt-separator bg-primary"></div>
                                     </div>
                                 </div>
                                 <!-- TITLE END -->                             
                                 <h4 class=" m-t0">
-                                    We will be so proud to be our guest.Lorem Ipsum is simply dummy text of the printing. 
+                                    {{about.title}} 
                                 </h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the typesetting industry's standard dummy text ever since the when.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>{{about.descriptions}}</p>
                                 
                                 <div class="row equal-wraper">
                                     <div class="col-md-6 col-sm-6 m-b30">
@@ -307,33 +307,46 @@
                             	<div class="home-about-block-outer bg-repeat bg-white" style="background-image:url({% static 'images/background/bg-dot.jpg' %});">
                                 	<div class="home-about-block-inner">
                                         <div class="home-about-slider owl-carousel owl-btn-vertical-center">
-                                        
+                                        {% if about.image1%}    
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="{% static 'images/about/pic1.jpg' %}" alt="">
+                                                    <img src="{{about.image1.url}}" alt="">
                                                 </div>
                                             </div>
+                                        {%endif%}    
+
+                                        {% if about.image2%}    
+                                            
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="{% static 'images/about/pic2.jpg' %}" alt="">
+                                                    <img src="{{about.image2.url}}" alt="">
                                                 </div>
                                             </div>
+                                        {%endif%}    
+
+                                        {% if about.image3%}    
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="{% static 'images/about/pic3.jpg' %}" alt="">
+                                                    <img src="{{about.image3.url}}" alt="">
                                                 </div>
                                             </div>
+                                        {%endif%}    
+
+                                        {% if about.image4%}    
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="{% static 'images/about/pic4.jpg' %}" alt="">
+                                                    <img src="{{about.image4.url}}" alt="">
                                                 </div>
                                             </div>
+                                        {%endif%}    
+
+                                        {% if about.image5%}    
                                             <div class="item">
                                                 <div class="home-about-slider-pic">
-                                                    <img src="{% static 'images/about/pic5.jpg' %}" alt="">
+                                                    <img src="{{about.image5.url}}" alt="">
                                                 </div>
                                             </div>                                                                                                                                                                                
-                                            
+                                        {%endif%}    
                                         </div>  
                                     </div>	
                                 </div>

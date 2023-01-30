@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.settings',
     'apps.contact',
+    'apps.about',
+    
     
     
 ]

@@ -20,10 +20,13 @@ from django.conf.urls.static import static
 
 from apps.settings.views import index
 from apps.contact.views import contact
+from apps.about.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
-    path("contact", contact, name='contact')
+    path("contact/", contact, name='contact'),
+    path("about/", about, name='about'),
+    
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

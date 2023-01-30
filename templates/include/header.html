@@ -161,7 +161,7 @@
                     <div class="header-nav navbar-collapse collapse">
                         <ul class=" nav navbar-nav">
                             <li class="active">
-                                <a href="javascript:;">Главная страница</a>
+                                <a href="{% url 'index'%}">Главная страница</a>
                                                                                   
                             </li>
                             <li>
@@ -173,7 +173,7 @@
                                 <ul class="sub-menu">
                                                                           
                                     <li>
-                                        <a href="about-1.html">О нас</a>
+                                        <a href="{% url 'about' %}">О нас</a>
                                     </li>
                                     <li>
                                         <a href="{% url 'contact'%}">Контакты</a>
