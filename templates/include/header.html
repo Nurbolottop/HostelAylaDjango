@@ -165,24 +165,28 @@
                                                                                   
                             </li>
                             <li>
-                                <a href="javascript:;">Блог</a>
+                                <a href="{% url 'rooms'%}">Наши номера</a>
                                                                
                             </li>                                         
                             <li class="submenu-direction">
                                 <a >Страницы</a>
                                 <ul class="sub-menu">
-                                                                          
+                                    <li>
+                                        <a href="javascript:;">Блог</a>
+                                                                       
+                                    </li> 
                                     <li>
                                         <a href="{% url 'about' %}">О нас</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'contact'%}">Контакты</a>
-                                    </li>
+                                    </li>  
                                     <li>
                                         <a href="contact-1.html">Наша команда</a>
                                     </li>
                                     <li>
                                         <a href="contact-1.html">Галерея</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'contact'%}">Контакты</a>
                                     </li>
                                 </ul>
                             </li>

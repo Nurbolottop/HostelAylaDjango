@@ -21,12 +21,17 @@ from django.conf.urls.static import static
 from apps.settings.views import index
 from apps.contact.views import contact
 from apps.about.views import about
+from apps.rooms.views import rooms, rooms_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path("contact/", contact, name='contact'),
     path("about/", about, name='about'),
+    path("rooms/", rooms, name='rooms'),
+    path('rooms_detail/<int:id>/', rooms_detail, name="rooms_detail"),
+    
+    
     
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
