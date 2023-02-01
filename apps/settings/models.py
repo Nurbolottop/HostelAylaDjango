@@ -35,3 +35,11 @@ class Slide(models.Model):
         verbose_name = "Настройка слайда"
         verbose_name_plural = "Настройки слайда"
         
+class Partners(models.Model):
+    name = models.CharField(max_length=255, verbose_name="Назваие партнера")
+    logo = models.ImageField(upload_to="partners/", verbose_name="Логотип партнера")
+    url = models.URLField(verbose_name="Ссылка на них")
+    
+    class Meta:
+        verbose_name = "Наш партнер"
+        verbose_name_plural = "Наши  партнеры"
