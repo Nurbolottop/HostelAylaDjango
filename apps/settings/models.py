@@ -43,3 +43,15 @@ class Partners(models.Model):
     class Meta:
         verbose_name = "Наш партнер"
         verbose_name_plural = "Наши  партнеры"
+        
+class Number(models.Model):
+    client = models.CharField(max_length=255,verbose_name="Клиетов")
+    team = models.CharField(max_length=255,verbose_name="Сотрудников")
+    star = models.CharField(max_length=255,verbose_name="Звезды хостела")
+    
+    room = models.ImageField(upload_to="number", verbose_name="Фотография комнаты")
+    cook = models.ImageField(upload_to="number", verbose_name="Фотография кухни")
+    game = models.ImageField(upload_to="number", verbose_name="Фотография Игровой зоны")
+    conference = models.ImageField(upload_to="number", verbose_name="Фотография Конференц зала")
+    
+    

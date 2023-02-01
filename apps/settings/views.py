@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from apps.settings.models import Setting,Slide, Partners
+from apps.settings.models import Setting,Slide, Partners, Number
 from apps.contact.models import Contact
 from apps.about.models import About
 from apps.rooms.models import Room
@@ -16,6 +16,7 @@ def index(request):
     slide = Slide.objects.all()
     about = About.objects.latest('id')
     partners = Partners.objects.all()
+    num = Number.objects.latest('id')
     
     context = {
         'setting' : setting,
@@ -24,6 +25,7 @@ def index(request):
         'about' : about,
         'room' : room,
         'partners' : partners,
+        'num' : num,
         
         
         

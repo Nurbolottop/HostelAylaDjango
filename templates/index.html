@@ -418,10 +418,10 @@
             <div class="section-full bg-change-section overlay-wraper p-tb80"   data-toggle="tab-hover">
                 <div class="overlay-main bg-black opacity-06"></div>
                 <div class="bg-changer">
-                    <div  class=" section-bg active" style="background-image:url({% static 'images/background/room.jpg' %})"></div>
-                    <div  class="section-bg" style="background-image:url({% static 'images/background/appartment.jpg' %})"></div>
-                    <div  class="section-bg" style="background-image:url({% static 'images/background/architecture.jpg' %})"></div> 
-                    <div  class="section-bg" style="background-image:url({% static 'images/background/interior.jpg' %})"></div> 
+                    <div  class=" section-bg active" style="background-image:url({{num.room.url}})"></div>
+                    <div  class="section-bg" style="background-image:url({{num.cook.url}})"></div>
+                    <div  class="section-bg" style="background-image:url({{num.game.url}})"></div> 
+                    <div  class="section-bg" style="background-image:url({{num.conference.url}})"></div> 
                 </div>
                                           
                 <div class="container">
@@ -445,21 +445,21 @@
                                                 
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
                                             <div class="m-b30 wt-icon-box-wraper">
-												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">999</span><b>+</b></h2>                                            
+												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.client}}</span><b>+</b></h2>                                            
                                                 <h5 class="wt-tilte m-b0 text-white">Клиентов</h5>
                                             </div>
                                         </div>
                                         
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
                                             <div class="m-b30  wt-icon-box-wraper">
-												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">15</span><b>+</b></h2>                                                
+												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.team}}</span><b>+</b></h2>                                                
                                                 <h5 class="wt-tilte m-b0 text-white">Сотрудников</h5>
                                             </div>
                                         </div>
                                         
                                         <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
                                             <div class="m-b30 wt-icon-box-wraper">
-                                                <h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">5</span><b>+</b></h2> 
+                                                <h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.star}}</span><b>+</b></h2> 
                                                 <h5 class="wt-tilte m-b0 text-white">Звездный Хостел</h5>
                                             </div>
                                         </div>
