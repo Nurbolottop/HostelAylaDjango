@@ -624,7 +624,7 @@
                     
                         <!-- TITLE START -->
                         <div class="section-head text-left">
-                            <h2 class="m-b5 text-white" data-title="Clients">Our Client Says</h2>
+                            <h2 class="m-b5 text-white" data-title="Clients">Что говорят аши клиенты ?</h2>
                             <div class="wt-separator-outer">
                                 <div class="wt-separator bg-primary"></div>
                             </div>
@@ -634,87 +634,32 @@
                         <!-- TESTIMONIAL 4 START ON BACKGROUND -->   
                         <div class="section-content">
                             <div class="testimonial-home owl-carousel  owl-btn-top-right">
+                                {% for user in review%}
                                 <div class="item">
                                     <div class="testimonial-6">
                                         <div class="testimonial-pic-block"> 
                                             <div class="testimonial-pic">
-                                                <img src="{% static 'images/testimonials/pic1.jpg' %}" width="132" height="132" alt="">
+                                                <img src="{{user.image_user.url}}" width="132" height="132" alt="">
                                             </div>
                                         </div>
                                         <div class="testimonial-text clearfix text-white">
                                             <div class="testimonial-detail ">
-                                                <h4 class="testimonial-name m-t0 m-b10">Andi Smith</h4>
+                                                <h4 class="testimonial-name m-t0 m-b10">{{user.name_user}}</h4>
                                             </div>
                                             <div class="testimonial-paragraph text-black p-t5">
-                                                <p>“Today we can tell you, thanks to your passion, hard work creativity, and expertise, you delivered us the most beautiful house great looks.</p>
+                                                <p>“{{user.message_user}}</p>
                                             </div>
                                             <div class="testimonial-detail ">
-                                            	<span class="testimonial-position">Newyork city</span>
+                                            	<span class="testimonial-position">{{user.email_user}}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="testimonial-6">
-                                        <div class="testimonial-pic-block"> 
-                                            <div class="testimonial-pic">
-                                                <img src="{% static 'images/testimonials/pic2.jpg' %}" width="132" height="132" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-text clearfix text-white">
-                                            <div class="testimonial-detail ">
-                                                <h4 class="testimonial-name m-t0 m-b10">Poul Anderson</h4>
-                                            </div>
-                                            <div class="testimonial-paragraph text-black p-t5">
-                                                <p>“Today we can tell you, thanks to your passion, hard work creativity, and expertise, you delivered us the most beautiful house great looks.</p>
-                                            </div>
-                                            <div class="testimonial-detail ">
-                                            	<span class="testimonial-position">Mexico city</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>  
-                                <div class="item">
-                                    <div class="testimonial-6">
-                                        <div class="testimonial-pic-block"> 
-                                            <div class="testimonial-pic">
-                                                <img src="{% static 'images/testimonials/pic3.jpg' %}" width="132" height="132" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-text clearfix text-white">
-                                            <div class="testimonial-detail ">
-                                                <h4 class="testimonial-name m-t0 m-b10">Kayra gray</h4>
-                                            </div>
-                                            <div class="testimonial-paragraph text-black p-t5">
-                                                <p>“Today we can tell you, thanks to your passion, hard work creativity, and expertise, you delivered us the most beautiful house great looks.</p>
-                                            </div>
-                                            <div class="testimonial-detail ">
-                                            	<span class="testimonial-position">Newyork city</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-6">
-                                        <div class="testimonial-pic-block"> 
-                                            <div class="testimonial-pic">
-                                                <img src="{% static 'images/testimonials/pic4.jpg' %}" width="132" height="132" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-text clearfix text-white">
-                                            <div class="testimonial-detail ">
-                                                <h4 class="testimonial-name m-t0 m-b10">Anna Smith</h4>
-                                            </div>
-                                            <div class="testimonial-paragraph text-black p-t5">
-                                                <p>“Today we can tell you, thanks to your passion, hard work creativity, and expertise, you delivered us the most beautiful house great looks.</p>
-                                            </div>
-                                            <div class="testimonial-detail ">
-                                            	<span class="testimonial-position">Newyork city</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                                                            
+                                {% endfor%}                                           
                             </div>
+                            <div class="extra-cell">
+                                <a href="#" class="contact-slide-show text-white"><i class="btn-half site-button button-lg m-b30">Оставить отзыв!</i><em></em></a>
+
                         </div>
                     </div>
                 </div>

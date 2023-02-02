@@ -21,7 +21,7 @@
                     <!-- ETRA Nav -->
                     <div class="extra-nav">
                         <div class="extra-cell">
-                            <a href="#" class="contact-slide-show text-white"><i class="fa fa-envelope-o"></i></a>
+                            <a href="{% url 'contact'%}" class="contact-slide-show text-white"><i class="fa fa-envelope-o"></i></a>
                         </div>    
                         <div class="extra-cell">											
                             <a href="#search" class=" text-white">
@@ -63,90 +63,101 @@
                         </div> 
                     </div>
 
-                    <!-- Contact Nav -->                            
-                     <div class="contact-slide-hide"> 
-                        <div class="contact-nav">
-                             <a href="javascript:void(0)" class="contact_close">&times;</a>
-                             <div class="contact-nav-form p-a30">
-                                <form class="cons-contact-form" method="post" action="form-handler.php">
-                                    <div class="contact-one m-b30">
-                                    
+                    <!-- Contact Nav -->  
+                        <div class="contact-slide-hide"> 
+                            <div class="contact-nav">
+                                <a href="javascript:void(0)" class="contact_close">&times;</a>
+                                <div class="contact-nav-form p-a30">
+                                    <div class="cons-contact-form"  action="form-handler.php">
+                                        <div class="contact-one m-b30">
+                                        
+                                            <!-- TITLE START -->
+                                            <div class="section-head text-center">
+                                                <h2 class="m-b5" data-title="{{setting.title}}">Оставить отзыв</h2>
+                                            </div>
+                                            <!-- TITLE END --> 
+                                            <form method = "POST" enctype="multipart/form-data">
+                                                {% csrf_token %}
+
+                                                <div class="row">
+                                                    <div class="col-md-6">                               
+                                                        <div class="form-group wt-inputicon-box">
+                                                            <input name="name_user" type="text" required class="form-control" placeholder="Имя">
+                                                            <i class="fs-input-icon sl-icon-user"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group wt-inputicon-box"> 
+                                                            <input name="email_user" type="text" class="form-control" required placeholder="Почта">
+                                                            <i class="fs-input-icon sl-icon-envolope-letter"></i>
+                                                        </div>                                                    
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group wt-inputicon-box">
+                                                            <input name="image_user" type="file" class="form-control" required placeholder="Ваша фотография">
+                                                            <i class="fs-input-icon sl-icon-envolope-letter"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group wt-inputicon-box">
+                                                            <textarea name="message_user" rows="3" class="form-control " required placeholder="Сообщение"></textarea>
+                                                            <i class="fs-input-icon sl-icon-envolope"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="text-center">
+                                                            <button name="submit" type="submit" value="Submit" class="btn-half site-button button-lg m-b15">
+                                                                    <span>Отправить</span><em></em>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="contact-info text-black m-b30">
                                         <!-- TITLE START -->
                                         <div class="section-head text-center">
-                                            <h2 class="m-b5" data-title="{{setting.title}}">Связаться</h2>
+                                            <h2 class="m-b5" data-title="Info">Контактная информация</h2>
                                         </div>
-                                        <!-- TITLE END -->  
-                                         <div class="row">
-                                             <div class="col-md-6">                               
-                                                <div class="form-group wt-inputicon-box">
-                                                    <input name="username" type="text" required class="form-control" placeholder="Имя">
-                                                    <i class="fs-input-icon sl-icon-user"></i>
+                                        <!-- TITLE END -->
+                                        <ul> 
+                                            <li>                           
+                                                <div class="wt-icon-box-wraper center p-b40">
+                                                    <div class="icon-md m-b20"><i class="sl-icon-phone"></i></div>
+                                                    <div class="icon-content">
+                                                        <h5 class="m-t0 font-weight-500">Тел.ном</h5>
+                                                        <p>{{contact.phone}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                             <div class="col-md-6">
-                                                <div class="form-group wt-inputicon-box"> 
-                                                    <input name="email" type="text" class="form-control" required placeholder="Почта">
-                                                    <i class="fs-input-icon sl-icon-envolope-letter"></i>
-                                                </div>                                                    
-                                            </div>
-                                             <div class="col-md-12">
-                                                <div class="form-group wt-inputicon-box">
-                                                    <textarea name="message" rows="3" class="form-control " required placeholder="Сообщение"></textarea>
-                                                    <i class="fs-input-icon sl-icon-envolope"></i>
+                                            </li>
+                                            
+                                            <li>
+                                                <div class="wt-icon-box-wraper center p-b40">
+                                                    <div class="icon-md m-b20"><i class="sl-icon-envolope-letter"></i></div>
+                                                    <div class="icon-content">
+                                                        <h5 class="m-t0 font-weight-500">Почта</h5>
+                                                        <p>{{contact.email}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                             <div class="col-md-12">
-                                                <div class="text-center">
-                                                    <button name="submit" type="submit" value="Submit" class="btn-half site-button button-lg m-b15">
-                                                            <span>Отправить</span><em></em>
-                                                    </button>
+                                            </li>
+                                            
+                                            <li>
+                                                <div class="wt-icon-box-wraper center">
+                                                    <div class="icon-md m-b20"><i class="sl-icon-map"></i></div>
+                                                    <div class="icon-content">
+                                                        <h5 class="m-t0 font-weight-500">Адрес</h5>
+                                                        <p>{{contact.address}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </form>
-                                <div class="contact-info text-black m-b30">
-                                    <!-- TITLE START -->
-                                    <div class="section-head text-center">
-                                        <h2 class="m-b5" data-title="Info">Контактная информация</h2>
-                                    </div>
-                                    <!-- TITLE END -->
-                                    <ul> 
-                                        <li>                           
-                                            <div class="wt-icon-box-wraper center p-b40">
-                                                <div class="icon-md m-b20"><i class="sl-icon-phone"></i></div>
-                                                <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Тел.ном</h5>
-                                                    <p>{{contact.phone}}</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <li>
-                                            <div class="wt-icon-box-wraper center p-b40">
-                                                <div class="icon-md m-b20"><i class="sl-icon-envolope-letter"></i></div>
-                                                <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Почта</h5>
-                                                    <p>{{contact.email}}</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        <li>
-                                            <div class="wt-icon-box-wraper center">
-                                                <div class="icon-md m-b20"><i class="sl-icon-map"></i></div>
-                                                <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Адрес</h5>
-                                                    <p>{{contact.address}}</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                    </ul>    
-                                </div>                                        
-                             </div>
-                        </div> 
-                    </div>                               
+                                            </li>
+                                            
+                                        </ul>    
+                                    </div>                                        
+                                </div>
+                            </div> 
+                        </div>   
+                                                
                     <!-- SITE Search -->
                     <div id="search"> 
                         <span class="close"></span>

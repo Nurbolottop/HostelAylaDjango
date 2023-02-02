@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from apps.settings.models import Setting,Slide, Partners, Number
 from apps.contact.models import Contact
 from apps.about.models import About
 from apps.rooms.models import Room
+from apps.review.models import Review
 
 
 # from apps.rooms.models import Room
@@ -17,6 +18,15 @@ def index(request):
     about = About.objects.latest('id')
     partners = Partners.objects.all()
     num = Number.objects.latest('id')
+    review = Review.objects.all()
+    
+    if request.method == "POST":
+        name_user = request.POST.get('name_user')
+        image_user = request.FILES.get('image_user')
+        email_user = request.POST.get('email_user')
+        message_user = request.POST.get('message_user')
+        product = Review.objects.create( name_user = name_user, image_user = image_user,email_user = email_user, message_user = message_user)
+        return redirect('index')
     
     context = {
         'setting' : setting,
@@ -26,6 +36,8 @@ def index(request):
         'room' : room,
         'partners' : partners,
         'num' : num,
+        'review' : review,
+        
         
         
         
