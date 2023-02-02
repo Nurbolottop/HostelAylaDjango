@@ -427,7 +427,7 @@
                 <div class="container">
                     <!-- TITLE START -->
                     <div class="section-head text-left">
-                        <h2 class="m-b5 text-white" data-title="Specialization">Мы в числах</h2>
+                        <h2 class="m-b5 text-white" data-title="Мы в числах">Мы в числах</h2>
                         <div class="wt-separator-outer">
                             <div class="wt-separator bg-primary"></div>
                         </div>
@@ -524,7 +524,7 @@
                 
                     <!-- TITLE START -->
                     <div class="section-head text-left">
-                        <h2 class="m-b5" data-title="Новости">Our Latest Blog</h2>
+                        <h2 class="m-b5" data-title="Новости">Наш Блог</h2>
                         <div class="wt-separator-outer">
                             <div class="wt-separator bg-primary"></div>
                         </div>
@@ -536,78 +536,43 @@
                         
                         
 						<div class="row">
-                        
+                            {% for blog in blog%}
                             <div class="col-md-6 col-sm-6">
                                 <div class="blog-post latest-blog-1 date-style-2">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:;"><img src="{% static 'images/blog/default/thum4.jpg' %}" alt=""></a>
+                                        <a href="{% url 'blog_detail' blog.id%}"><img src="{{blog.image1.url}}" alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
-                                        <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
+                                        <div class="post-date"> <strong>{{blog.blog_time}}</strong></div> 
                                         
                                             <div class="wt-post-meta">
                                                 <ul class="clearfix">
                                                     <li class="post-author">
                                                         <div class="post-author-pic">
-                                                            <span><img src="{% static 'images/testimonials/pic1.jpg' %}" alt=""></span>
-                                                            <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
+                                                            <span><img src="{{setting.logo.url}}" alt=""></span>
+                                                            <span><strong> By</strong> <a >{{setting.title}}</a></span>
                                                         </div> 
                                                     </li>
-                                                    <li class="post-comment"><i class="fa fa fa-comments text-primary"></i><a href="javascript:;">10 Comment</a> </li>
                                                 </ul>
                                             </div> 
                                                                                
                                             <div class="wt-post-title">
-                                                <h3 class="post-title"><a href="javascript:;">Your first source for architecture, dsign and art news.</a></h3>
+                                                <h3 class="post-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.title}}</a></h3>
                                             </div>
                                             
                                             <div class="wt-post-text">
-                                                <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusd veritatis quisquam laboriosam asperiores, tenetur, blanditiis,quaerat odit ex exercitationem pariatur.</p>
+                                                <p>{{blog.descriptions}}</p>
                                             </div>
                                             
                                             <div class="readmore-line">
-                                                <a href="javascript:;" class="site-button-ink text-primary font-weight-900 ">Read More</a>
+                                                <a href="{% url 'blog_detail' blog.id%}" class="site-button-ink text-primary font-weight-900 ">Read More</a>
                                             </div> 
                                             
                                         </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <div class="blog-post latest-blog-1 date-style-2">
-                                    <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:;"><img src="{% static 'images/blog/default/thum7.jpg' %}" alt=""></a>
-                                    </div>
-                                    <div class="wt-post-info">
-                                        <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
-                                        
-                                            <div class="wt-post-meta">
-                                                <ul class="clearfix">
-                                                    <li class="post-author">
-                                                        <div class="post-author-pic">
-                                                            <span><img src="{% static 'images/testimonials/pic2.jpg' %}" alt=""></span>
-                                                            <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
-                                                        </div> 
-                                                    </li>
-                                                    <li class="post-comment"><i class="fa fa fa-comments text-primary"></i><a href="javascript:;">10 Comment</a> </li>
-                                                </ul>
-                                            </div> 
-                                                                               
-                                            <div class="wt-post-title">
-                                                <h3 class="post-title"><a href="javascript:;">Your first source for architecture, dsign and art news.</a></h3>
-                                            </div>
-                                            
-                                            <div class="wt-post-text">
-                                                <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusd veritatis quisquam laboriosam asperiores, tenetur, blanditiis,quaerat odit ex exercitationem pariatur.</p>
-                                            </div>
-                                            
-                                            <div class="readmore-line">
-                                                <a href="javascript:;" class="site-button-ink text-primary font-weight-900 ">Read More</a>
-                                            </div> 
-                                            
-                                        </div>
-                                </div>
-                            </div>                                        
+                            {% endfor%}
+                            
                         </div> 
                                                
                     </div>
@@ -624,7 +589,7 @@
                     
                         <!-- TITLE START -->
                         <div class="section-head text-left">
-                            <h2 class="m-b5 text-white" data-title="Clients">Что говорят аши клиенты ?</h2>
+                            <h2 class="m-b5 text-white" data-title="Отзывы">Что говорят аши клиенты ?</h2>
                             <div class="wt-separator-outer">
                                 <div class="wt-separator bg-primary"></div>
                             </div>

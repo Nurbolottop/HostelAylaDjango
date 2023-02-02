@@ -4,6 +4,7 @@ from apps.contact.models import Contact
 from apps.about.models import About
 from apps.rooms.models import Room
 from apps.review.models import Review
+from apps.blog.models import Blog, BackroundBlog
 
 
 # from apps.rooms.models import Room
@@ -11,6 +12,7 @@ from apps.review.models import Review
 # Create your views here.
 def index(request):
     room = Room.objects.all()
+    blog = Blog.objects.all()
     
     setting = Setting.objects.latest('id')
     contact = Contact.objects.latest('id')
@@ -37,7 +39,7 @@ def index(request):
         'partners' : partners,
         'num' : num,
         'review' : review,
-        
+        'blog' : blog,
         
         
         
