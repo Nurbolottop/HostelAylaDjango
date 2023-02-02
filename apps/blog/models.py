@@ -27,3 +27,18 @@ class BackroundBlog(models.Model):
         verbose_name = "Задний фон страницы <<Наш Блог>>"
         verbose_name_plural = "Задний фон страницы  <<Наш Блог>>"
         
+class Comment(models.Model):
+    name = models.CharField(max_length=255,verbose_name="Имя")
+    email = models.EmailField(verbose_name="Почта")
+    message = models.TextField(verbose_name="Коментарий")
+    post = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="post_comment")
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        ordering = ("-created",)
+        verbose_name = "Комментрии к новостям"
+        verbose_name_plural = "Комментрии к новостям"
+        

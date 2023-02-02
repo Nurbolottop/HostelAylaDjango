@@ -173,7 +173,7 @@
                                             
                                                
                                         </div>
-                                    </div>
+                                    
                                 </div>
                                 
                             </div>
@@ -181,52 +181,28 @@
                     </div>
                     <div class="clear" id="comment-list">
                         <div class="comments-area" id="comments">
-                            <h2 class="comments-title">4 Comments</h2>
                             <div class="p-tb30">
                                 <!-- COMMENT LIST START -->
                                 <ol class="comment-list p-a30 bg-gray">
                                     <li class="comment">
-                                        <!-- COMMENT BLOCK -->
-                                        <div class="comment-body">
-                                            <div class="comment-meta">
-                                                <a href="javascript:void(0);">March 6, 2019 at 7:15 am</a>
-                                            </div>                                        
-                                            <div class="comment-author vcard">
-                                                <img  class="avatar photo" src="images/testimonials/pic1.jpg" alt="">
-                                                <cite class="fn">Diego</cite>
-                                                <span class="says">says:</span>
-                                            </div>
+                                    	<!-- COMMENT BLOCK -->
+                                        {% for comment in room.post_comment.all %}
 
-                                            <p>Sit amet nibh vulputate cursus a sit amet mauris lorem ipsum dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio http://themeforest.net Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat </p>
-                                            <div class="reply">
-                                                <a href="javscript:;" class="comment-reply-link letter-spacing-2 text-uppercase">Read More</a>
-                                            </div>
-                                        </div>
-                                        <!-- SUB COMMENT BLOCK -->
-                                        <ol class="children">
-                                            <li class="comment odd parent">
-                                            
-                                                <div class="comment-body">
-                                                    <div class="comment-meta">
-                                                        <a href="javascript:void(0);">March 8, 2019 at 9:15 am</a>
-                                                    </div>                                                
-                                                    <div class="comment-author vcard">
-                                                        <img  class="avatar photo" src="images/testimonials/pic3.jpg" alt="">
-                                                        <cite class="fn">Brayden</cite>
-                                                        <span class="says">says:</span>
-                                                    </div>
-
-                                                    <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusdam veritatis quisquam laboriosam esse beatae hic perferendis velit deserunt soluta iste repellendus officia in neque veniam debitis</p>
-                                                    <div class="reply">
-                                                        <a href="javscript:;" class="comment-reply-link letter-spacing-2 text-uppercase">Read More</a>
-                                                    </div>
-                                                
+                                            <div class="comment-body">
+                                                <div class="comment-meta">
+                                                    <a>{{comment.created}}</a>
+                                                </div>                                        
+                                                <div class="comment-author vcard">
+                                                    <cite class="fn">{{comment.name}}</cite>
                                                 </div>
-                                                
-                                                
-                                                
-                                            </li>
-                                        </ol>
+
+                                                <p>{{comment.message}}</p>
+                                                <div class="reply">
+                                                </div>
+                                            </div>
+                                            <hr
+                                            <!-- SUB COMMENT BLOCK -->
+                                        {% endfor %}
                                     </li>
                                     
                                 </ol>
@@ -235,45 +211,40 @@
                                 <!-- LEAVE A REPLY START -->
                                 <div class="comment-respond m-t30" id="respond">
     
-                                    <h2 class="comment-reply-title" id="reply-title">Leave a Comments
-                                        <small>
-                                            <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
-                                        </small>
+                                    <h2 class="comment-reply-title" id="reply-title">Оставить комментарий
                                     </h2>
-    
-                                    <form class="comment-form" id="commentform" method="post" >
-                                
-                                        <p class="comment-form-author">
-                                            <label for="author">Name <span class="required">*</span></label>
-                                            <input class="form-control" type="text" value="" name="user-comment"  placeholder="Author" id="author">
-                                        </p>
+                                    <div class="comment-form">
+                                        <form method="POST">
+                                            {%csrf_token%}
+
+                                    
+                                            <p class="comment-form-author">
+                                                <label for="author">Имя <span class="required"></span></label>
+                                                <input class="form-control" type="text"  name="name"  placeholder="Имя" 
+                                            </p>
+                                            
+                                            <p class="comment-form-email">
+                                                <label for="email">Почта <span class="required"></span></label>
+                                                <input class="form-control" type="text"  name="email" placeholder="Почта"                                          </p>
+                                            
                                         
-                                        <p class="comment-form-email">
-                                            <label for="email">Email <span class="required">*</span></label>
-                                            <input class="form-control" type="text" value="" name="email" placeholder="Email"  id="email">
-                                        </p>
-                                        
-                                        <p class="comment-form-url">
-                                            <label for="url">Website</label>
-                                            <input class="form-control" type="text"  value=""  name="url"   placeholder="Website" id="url">
-                                        </p>
-                                        
-                                        <p class="comment-form-comment">
-                                            <label for="comment">Comment</label>
-                                            <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
-                                        </p>
-                                        
-                                        <p class="form-submit">
-                                            <button class="site-button radius-no text-uppercase font-weight-600" type="button">Submit</button>
-                                        </p>
-                                        
-                                    </form>
-    
+                                            
+                                            <p class="comment-form-comment">
+                                                <label for="comment">Комментарий</label>
+                                                <textarea class="form-control"  name="message" placeholder="Комментарий" ></textarea>
+                                            </p>
+                                            
+                                            <p class="form-submit">
+                                                <button class="site-button radius-no text-uppercase font-weight-600" type="submit">Отправить</button>
+                                            </p>
+                                            
+                                        </form>
+                                    </div>
                                 </div>
                                 <!-- LEAVE A REPLY END -->
                            </div>
                         </div>
-                    </div>                        
+                    </div>                      
 
                         
                 </div>
