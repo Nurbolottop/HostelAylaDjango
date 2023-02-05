@@ -2,33 +2,84 @@ from django.db import models
 
 # Create your models here.
 class Room(models.Model):
-    title = models.CharField(max_length=255,verbose_name="О номере")
-    descriptions = models.TextField(verbose_name="Описание о номере")
-    price = models.CharField(max_length=255,verbose_name="Цена номера")
+    title = models.CharField(
+        max_length=255,
+        verbose_name="О номере"
+        )
+    descriptions = models.TextField(
+        verbose_name="Описание о номере"
+        )
+    price = models.CharField(
+        max_length=255,
+        verbose_name="Цена номера"
+        )
+    image1 = models.ImageField(
+        upload_to="room_image", 
+        verbose_name="Фотография номера", 
+        blank=True, null=True)
     
-    service = models.CharField(max_length=255,verbose_name="Оценка услуг от 1 до 5")
-    comfort = models.CharField(max_length=255,verbose_name="Оценка комфорта от 1 до 5")
-    location = models.CharField(max_length=255,verbose_name="Оценка чистоты от 1 до 5")
-    
-    amenities1 = models.CharField(max_length=255,verbose_name="Первое удобство", blank=True, null=True)
-    amenities2 = models.CharField(max_length=255,verbose_name="Второе удобство", blank=True, null=True)
-    amenities3 = models.CharField(max_length=255,verbose_name="Третье удобство", blank=True, null=True)
-    amenities4 = models.CharField(max_length=255,verbose_name="Четвертое удобство", blank=True, null=True)
-    amenities5 = models.CharField(max_length=255,verbose_name="Пятое удобство", blank=True, null=True)
-    amenities6 = models.CharField(max_length=255,verbose_name="Шестое удобство", blank=True, null=True)
-    
-    image1 = models.ImageField(upload_to="about", verbose_name="Первая фотография номера", blank=True, null=True)
-    image2 = models.ImageField(upload_to="about", verbose_name="Вторая фотография номера", blank=True, null=True)
-    image3 = models.ImageField(upload_to="about", verbose_name="Третья фотография номера", blank=True, null=True)
-    image4 = models.ImageField(upload_to="about", verbose_name="Четвертая фотография номера", blank=True, null=True)
-    image5 = models.ImageField(upload_to="about", verbose_name="Пятая фотография номера", blank=True, null=True)
-    
+    service = models.CharField(
+        max_length=255,
+        verbose_name="Оценка услуг от 1 до 5"
+        ) 
+    comfort = models.CharField(
+        max_length=255,
+        verbose_name="Оценка комфорта от 1 до 5"
+        )
+    location = models.CharField(
+        max_length=255,
+        verbose_name="Оценка чистоты от 1 до 5"
+        )
     def __str__(self):
         return f"{self.title} - {self.descriptions}"
     
+    
     class Meta:
-        verbose_name = "Настройка номера"
-        verbose_name_plural = "Настройки Номеров"
+        verbose_name = "Наш номер"
+        verbose_name_plural = "Наши Номера"
+        
+class Amenities(models.Model):
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name="amenities",
+        verbose_name="Выберите номер"
+    )
+    amenities = models.CharField(
+        max_length=255,
+        verbose_name="Удобство номера",
+        blank=True, null=True
+        )
+
+    def __str__(self):
+        return f"{self.room} - {self.amenities}"
+    
+    class Meta:
+        verbose_name = "Добавить удобство для номера"
+        verbose_name_plural = "Добавить удобство для номера"
+        
+class ImageRoom(models.Model):
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name="image_room",
+        verbose_name="Выберите номер"
+    )
+    image = models.ImageField(
+        upload_to="about", 
+        verbose_name="Фотография номера", 
+        blank=True, null=True)
+    
+    def __str(self):
+        return f"{self.room} - {self.image}"
+
+    class Meta:
+        verbose_name = "Добавить фотографию для номера"
+        verbose_name_plural = "Добавить фотографию для номера"
+    
+
+    
+
         
 class BackroundRoom(models.Model):
     image = models.ImageField(upload_to="backround/", verbose_name="Задний фон")
@@ -37,6 +88,8 @@ class BackroundRoom(models.Model):
         verbose_name = "Задний фон страницы <<Наши номера>>"
         verbose_name_plural = "Задний фон страницы  <<Наши номера>>"
     
+    
+
 class Comment(models.Model):
     name = models.CharField(max_length=255,verbose_name="Имя")
     email = models.EmailField(verbose_name="Почта")

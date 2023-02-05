@@ -4,11 +4,6 @@ from django.db import models
 class About(models.Model):
     title = models.CharField(max_length=255,verbose_name="О нас")
     descriptions = models.TextField(verbose_name="Описание о нас")
-    image1 = models.ImageField(upload_to="about", verbose_name="Первая фотография о нас", blank=True, null=True)
-    image2 = models.ImageField(upload_to="about", verbose_name="Вторая фотография о нас", blank=True, null=True)
-    image3 = models.ImageField(upload_to="about", verbose_name="Третья фотография о нас", blank=True, null=True)
-    image4 = models.ImageField(upload_to="about", verbose_name="Четвертая фотография о нас", blank=True, null=True)
-    image5 = models.ImageField(upload_to="about", verbose_name="Пятая фотография о нас", blank=True, null=True)
     
     def __str__(self):
         return f"{self.title} - {self.descriptions}"
@@ -16,6 +11,22 @@ class About(models.Model):
     class Meta:
         verbose_name = "Настройка О нас"
         verbose_name_plural = "Настройки О нас"
+        
+class ImageAbout(models.Model):
+    about = models.ForeignKey(
+        About,
+        on_delete= models.CASCADE,
+        related_name="about",
+        verbose_name="О нас"
+    )
+    image = models.ImageField(upload_to="about", verbose_name="Фотография о нас", blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.about} - {self.image}"
+    
+    class Meta:
+        verbose_name = "Добавить фотографию  О нас"
+        verbose_name_plural = "Добавить фотографию О нас"
         
 class BackroundAbout(models.Model):
     image = models.ImageField(upload_to="backround/", verbose_name="Задний фон")

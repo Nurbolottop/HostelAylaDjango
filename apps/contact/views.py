@@ -16,4 +16,4 @@ def contact(request):
         
     }
     
-    return render   (request, 'contact-1.html', context)
+    return render   (request, 'website/contact-1.html', context)

@@ -18,7 +18,7 @@ def blog(request):
         
     }
     
-    return render(request, 'news-grid.html', context)
+    return render(request, 'blog/news-grid.html', context)
 
 def blog_detail(request, id):
     contact = Contact.objects.latest('id')
@@ -41,4 +41,4 @@ def blog_detail(request, id):
         'backround' : backround,
     }
     
-    return render(request, 'post-gallery.html', context)
+    return render(request, 'blog/post-gallery.html', context)

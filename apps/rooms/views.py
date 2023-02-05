@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from apps.settings.models import Setting
-from apps.rooms.models import Room,BackroundRoom,Comment
+from apps.rooms.models import Room,BackroundRoom,Comment, ImageRoom, Amenities
 
 from apps.contact.models import Contact
 # Create your views here.
@@ -18,7 +18,7 @@ def rooms(request):
         'backround' : backround,
     }
     
-    return render(request, 'rooms.html', context)
+    return render(request, 'rooms/rooms.html', context)
 
 def rooms_detail(request, id):
     contact = Contact.objects.latest('id')
@@ -40,4 +40,4 @@ def rooms_detail(request, id):
         'backround' : backround,
     }
     
-    return render(request, 'room-detail.html', context)
+    return render(request, 'rooms/room-detail.html', context)

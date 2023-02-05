@@ -21,4 +21,4 @@ def about(request):
         
     }
     
-    return render   (request, 'about-1.html', context)
+    return render   (request, 'website/about-1.html', context)

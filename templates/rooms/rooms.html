@@ -1,0 +1,111 @@
+{% extends 'homepage.html'%}
+{% load static %}
+{% block content%}
+
+	<div class="page-wraper"> 
+
+        <!-- HEADER START -->
+        {% include 'include/header.html'%}
+        <!-- HEADER END -->
+        <!-- HEADER END -->
+        
+        <!-- CONTENT START -->
+        <div class="page-content">
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url({{backround.image.url}});">
+            	<div class="overlay-main bg-black opacity-07"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                    	<div class="banner-title-outer">
+                        	<div class="banner-title-name">
+                        		<h2 class="text-white  font-80 font-weight-900">Наши номера</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="{% url 'index'%}">Домой</a></li>
+                                    <li>Наши номера</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+            
+			<!-- SECTION CONTENT START -->
+            <div class="section-full p-tb90 bg-gray">
+            	
+                
+                <!-- GALLERY CONTENT START -->
+                <div class="portfolio-wrap mfp-gallery news-grid clearfix">
+                        <div class="row">
+                            <!-- COLUMNS 1 -->
+                            {% for room in room %}
+                                <div class="masonry-item cat-1 col-lg-4 col-md-6 col-sm-6 m-b30" style="max-width:300px;"
+                                >
+                                    <div class="wt-img-effect ">
+                                        <img src="{{room.image1.url}}" width ='300px' alt="">
+                                    </div>
+                                    <div class="p-a20 bg-white">
+                                        <div class="wt-post-info">
+                                            <div class="wt-post-meta ">
+                                                <ul>
+                                                    <li class="post-author"><i class="fa fa-money"></i><a><span>Цена</span></a> </li>
+                                                    <li class="post-date"><strong>{{room.price}}</strong> </li>
+
+                                                    <li class="post-comment"><i ></i><a > <span>Сомов</span></a> </li>
+                                                </ul>
+                                            </div>
+                                                                                
+                                            <div class="wt-post-title ">
+                                                <h3 class="post-title"><a href="{% url 'rooms_detail' room.id%}" class="  m-t0">{{room.title}}</a></h3>
+                                            </div>
+                                            
+                                            <div class="wt-post-text">
+                                                <p>{{room.descriptions}}</p> 
+                                            </div>
+                                            <a href="{% url 'rooms_detail' room.id%}" class="btn-half site-button button-md m-b15"><span>Узнать Больше</span><em></em></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                                                                                                                         
+                        </div>
+                    </div>
+                <!-- GALLERY CONTENT END -->
+            
+            </div>
+            <!-- SECTION CONTENT END  -->
+
+        </div>
+        <!-- CONTENT END -->
+                   
+        <!-- FOOTER START -->
+        {% include 'include/footer.html'%}
+
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+        
+    </div>
+ 
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+{% endblock%}

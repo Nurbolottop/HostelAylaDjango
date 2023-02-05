@@ -1,0 +1,667 @@
+{% extends 'homepage.html'%}
+{% load static %}
+{% block content%}
+
+	<div class="page-wraper"> 
+
+        <!-- HEADER START -->
+        {% include 'include/header.html'%}
+        <!-- HEADER END -->
+        
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+                                            
+            <!-- SLIDER START -->
+            <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="goodnews-header" data-source="gallery" style="background:#eeeeee;padding:0px;">
+                <div id="welcome" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
+                    <ul>	
+                        <!-- SLIDE 1 -->
+                        {% for slide in slide%}
+                        <!-- SLIDE 3 -->
+                        <li >
+                            <img src="{{slide.image.url}}"  alt=""  data-lazyload="{{slide.image.url}}" data-bgposition="center center" 
+                            data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 0 [ for overlay ] -->
+                            <div class="tp-caption tp-shape tp-shapewrapper " 
+                            id="slide-903-layer-0" 
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                            data-width="full"
+                            data-height="full"
+                            data-whitespace="nowrap"
+                            data-type="shape" 
+                            data-basealign="slide" 
+                            data-responsive_offset="off" 
+                            data-responsive="off"
+                            data-frames='[
+                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
+                            ]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+                            
+                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
+                            </div>
+                           
+                            <!-- LAYER NR. 1 [ Black Box ] -->
+                            <div class="tp-caption   tp-resizeme" 
+                            id="slide-903-layer-1" 
+                            data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" 
+                            data-y="['top','top','top','top']" data-voffset="['250','250','250','250']"  
+                            data-fontsize="['46','46','46','32']"
+                            data-lineheight="['56','56','56','50']"
+                            data-width="['0','0','0','0']"
+                            data-height="['','','','']"
+                            data-whitespace="['normal','normal','normal','normal']"
+                        
+                            data-type="text" 
+                            data-responsive_offset="on" 
+                            data-frames='[
+                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
+                            ]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+                        
+                            style="z-index: 13; 
+                            white-space: normal; 
+                            font-weight: 900;
+                            color:#fff;
+                            border-width:0px;">
+                            <div class=" rev-slider-style-1"></div>
+                            </div>
+                            
+                            
+                                                        
+                            <!-- LAYER NR. 2 [ for title ] -->
+                            <div class="tp-caption   tp-resizeme" 
+                            id="slide-903-layer-2" 
+                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
+                            data-y="['top','top','top','top']" data-voffset="['270','270','270','270']"  
+                            data-fontsize="['56','56','38','28']"
+                            data-lineheight="['66','66','48','38']"
+                            data-width="['700','700','96%','96%']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+                        
+                            data-type="text" 
+                            data-responsive_offset="on" 
+                            data-frames='[
+                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
+                            ]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[5,5,5,5]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[20,20,20,20]"
+                        
+                            style="z-index: 13; 
+                            white-space: normal; 
+                            font-weight: 900;
+                            color:#fff;
+                            border-width:0px;">
+                            <div style="font-family: 'DM Serif Text', serif;text-transform:uppercase;">
+                                <span class="text-primary"> {{slide.title}} </span><br>
+                                 {{slide.descriptions}}
+                            </div>
+                            
+                            </div>
+                            
+                           
+                            
+                            <!-- LAYER NR. 4 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme" 	
+                            id="slide-903-layer-4"						
+                            data-x="['left','left','left','left']" data-hoffset="['40','40','40','40']" 
+    
+                            data-y="['top','top','top','top']" data-voffset="['570','570','520','460']"  
+                            data-lineheight="['none','none','none','none']"
+                            data-width="['300','300','300','300']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+                            
+                            data-type="text" 
+                            data-responsive_offset="on"
+                            data-frames='[ 
+                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
+                            ]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+                            
+                            style="z-index:13; text-transform:uppercase;">
+                            <a href="javascript:;" class="site-button slider-btn-left btn-half"><span> More About</span><em></em></a>
+                            </div>
+
+     
+                        </li> 
+                        {% endfor %}                       
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	
+                </div>
+            </div>
+            <!-- SLIDER END -->
+            
+            <!--BOOKING SECTION START-->
+            <div class="section-full p-t25 booking-bar">
+                <div class="container">
+					<div class="booking-bar-inner bg-primary">
+                        <div class="booking-fram-name">
+                            <h3 class="m-a0">Book A Room</h3>
+                        </div>
+                        <div class="booking-form">
+                            <form>
+                                <ul>
+                                    <li class="date-cal-block">
+                                        <div class="form-group clearfix">
+                                            <label>In-Out Time</label>
+                                            <div class="t-datepicker">
+                                              <div class="t-check-in form-control"></div>
+                                              <div class="t-check-out form-control"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                                              
+                                    <li class="room-type-block">
+                                        <div class="form-group">
+                                            <label>Room Type</label>
+                                            <div class="select-box">
+                                                <select class="form-control" name="room">
+                                                    <option selected="selected" disabled="disabled">Single room</option>
+                                                    <option value="Single">Single room</option>
+                                                    <option value="Double">Double Room</option>
+                                                    <option value="Deluxe">Deluxe room</option>
+                                                </select>
+                                            </div>
+                                        </div>                            
+                                    </li>  
+                                    
+                                    <li class="adult-type-block">
+                                        <div class="form-group">
+                                            <label>Adult</label>
+                                            <div class="select-box">
+                                                <select class="form-control" name="No-adult">
+                                                    <option selected="selected" disabled="disabled">Adult</option>
+                                                    <option value="one">1</option>
+                                                    <option value="two">2</option>
+                                                    <option value="three">3</option>
+                                                </select>
+                                            </div>
+                                        </div>                            
+                                    </li>
+                                    
+                                    <li class="children-type-block">
+                                        <div class="form-group">
+                                            <label>Childrens</label>
+                                            <div class="select-box">
+                                                <select class="form-control" name="No-children">
+                                                    <option selected="selected" disabled="disabled">Childrens</option>
+                                                    <option value="one">1</option>
+                                                    <option value="two">2</option>
+                                                    <option value="three">3</option>
+                                                </select>
+                                            </div>
+                                        </div>                            
+                                    </li> 
+                                    
+                                    <li class="booking-form-btn-block">
+                                        <div class="form-group">
+                                            <button type="submit" class="site-button-secondry btn-half"><span> Book</span><em></em></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <!--BOOKING SECTION END-->
+                                   
+            <!-- WELCOME SECTION START -->
+            <div class="section-full p-tb90 bg-white overflow-hide">
+              
+                <div class="container">
+                    <div class="section-content">
+
+                    	<div class="row">
+                   
+                    		<div class="col-md-6 col-sm-12 text-black">
+                                <!-- TITLE START -->
+                                <div class="section-head text-left">
+                                    <h2 class=" m-b5" data-title="О {{setting.title}}">О {{setting.title}}</h2>
+                                    <div class="wt-separator-outer">
+                                        <div class="wt-separator bg-primary"></div>
+                                    </div>
+                                </div>
+                                <!-- TITLE END -->                             
+                                <h4 class=" m-t0">
+                                    {{about.title}} 
+                                </h4>
+                                <p>{{about.descriptions}}</p>
+                                
+                                <div class="row equal-wraper">
+                                    <div class="col-md-6 col-sm-6 m-b30">
+										<div class="wt-icon-box-wraper left bg-gray p-a20 hover-box-effect v-icon-effect  equal-col">
+                                            <div class="icon-md m-b20">
+                                                <span class="icon-cell"><i class="flaticon-room-service v-icon"></i></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="wt-tilte">Кухня</h4>
+                                            </div>
+                                        </div>                                         
+                                    </div>  
+                                                                     
+                                    <div class="col-md-6 col-sm-6 m-b30">
+										<div class="wt-icon-box-wraper left bg-gray p-a20 hover-box-effect v-icon-effect  equal-col">
+                                            <div class="icon-md m-b20">
+                                                <span class="icon-cell"><i class="flaticon-conference v-icon"></i></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="wt-tilte ">Конференц-зал</h4>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    
+                                    <div class="col-md-6 col-sm-6  m-b30">
+										<div class="wt-icon-box-wraper left bg-gray p-a20 hover-box-effect v-icon-effect  equal-col">
+                                            <div class="icon-md m-b20">
+                                                <span class="icon-cell"><i class="flaticon-wifi v-icon"></i></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="wt-tilte ">Бесплатный  Wi-Fi</h4>
+                                            </div>
+                                        </div>                                         
+                                    </div>  
+                                                                     
+                                    <div class="col-md-6 col-sm-6  m-b30">
+										<div class="wt-icon-box-wraper left bg-gray p-a20 hover-box-effect v-icon-effect  equal-col">
+                                            <div class="icon-md m-b20">
+                                                <span class="icon-cell"><i class="flaticon-cards v-icon"></i></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="wt-tilte ">Игровая Зона</h4>
+                                            </div>
+                                        </div> 
+                                    </div>                                    
+                                </div>
+                                 <a href="{% url 'about'%}" class="btn-half site-button button-lg m-b30"><span>Узнать Больше</span><em></em></a>
+                            </div>
+                            
+                        	<div class="col-md-6 col-sm-12">
+                            	<div class="home-about-block-outer bg-repeat bg-white" style="background-image:url({% static 'images/background/bg-dot.jpg' %});">
+                                	<div class="home-about-block-inner">
+                                        <div class="home-about-slider owl-carousel owl-btn-vertical-center">
+                                            {% for about in about.about.all%}
+
+                                            {% if about.image%}    
+                                                <div class="item">
+                                                    <div class="home-about-slider-pic">
+                                                        <img src="{{about.image.url}}" alt="">
+                                                    </div>
+                                                </div>
+                                            {%endif%}    
+                                        {% endfor %}
+                                        </div>  
+                                    </div>	
+                                </div>
+                            </div>                                 
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- WELCOME  SECTION END -->  
+
+            <!-- ROOMS SLIDER START -->
+            <div class="section-full p-tb90 bg-gray">
+            	<div class="container">
+
+                    <!-- TITLE START -->
+                    <div class="section-head text-center">
+                        <h2 class="m-b5" data-title="{{setting.title}}">Наши Номера </h2>
+                        <div class="wt-separator-outer">
+                            <div class="wt-separator bg-primary"></div>
+                        </div>
+                    </div>
+                    <!-- TITLE END -->
+                    
+                                      
+                </div>  
+                                
+				<div class="container-fluid">
+                    <!-- IMAGE CAROUSEL START -->
+                    <div class="section-content">
+                        <div class="owl-carousel owl-carousel-filter2 owl-btn-bottom-center">
+                            <!-- COLUMNS 1 --> 
+                            {% for room in room %}
+                            <div class="item col-1" style="max-width:400px;">
+                                <div class="room-rent-section-outer" >
+                                    <div class="room-rent-section">
+                                        <div class="rooms-pic-section">
+                                            <div class="wt-media">
+                                                <img src="{{room.image1.url}}"  alt="">
+                                                <div class="overlay-bx-3"></div>
+                                                <h3 class="m-b0 wt-title">{{room.title}}</h3>
+                                            </div>
+
+                                        </div>
+                                        <div class="room-info-section text-black">
+                                            <span>{{room.price}}/в ночь</span>
+                                            {% comment %} <ul class="clearfix">
+                                                <li><i class="fa fa-expand"></i> <strong>Size:</strong> 30m² </li>
+                                                <li><i class="fa fa-user"></i> <strong>Adult:</strong> 3 </li>
+                                                <li><i class="fa fa-eye"></i> <strong>View:</strong> balcony </li>
+                                            </ul> {% endcomment %}
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'rooms_detail' room.id%}" class="btn-half site-button button-lg"><span>Узнать больше</span><em></em></a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}                                
+                              
+                            <!-- COLUMNS 8 -->                         
+                            
+    
+                        </div>
+                    </div>
+                </div>
+                
+             </div>   
+            <!-- ROOMS  SLIDER END -->
+
+           
+                        
+            <!-- OUR SPECIALLIZATION START -->
+            <div class="section-full bg-change-section overlay-wraper p-tb80"   data-toggle="tab-hover">
+                <div class="overlay-main bg-black opacity-06"></div>
+                <div class="bg-changer">
+                    <div  class=" section-bg active" style="background-image:url({{num.room.url}})"></div>
+                    <div  class="section-bg" style="background-image:url({{num.cook.url}})"></div>
+                    <div  class="section-bg" style="background-image:url({{num.game.url}})"></div> 
+                    <div  class="section-bg" style="background-image:url({{num.conference.url}})"></div> 
+                </div>
+                                          
+                <div class="container">
+                    <!-- TITLE START -->
+                    <div class="section-head text-left">
+                        <h2 class="m-b5 text-white" data-title="Мы в числах">Мы в числах</h2>
+                        <div class="wt-separator-outer">
+                            <div class="wt-separator bg-primary"></div>
+                        </div>
+                    </div>
+                    <!-- TITLE END -->                                   
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="services-part-left ">
+                            	{% comment %} <div class="text-white">
+                                <h3 class=" m-t0">Discover a hotel that defines a new dimension of luxury.</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferme ntum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
+                                </div> {% endcomment %}
+                                <div class="section-content">
+                                    <div class="row">
+                                                
+                                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
+                                            <div class="m-b30 wt-icon-box-wraper">
+												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.client}}</span><b>+</b></h2>                                            
+                                                <h5 class="wt-tilte m-b0 text-white">Клиентов</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
+                                            <div class="m-b30  wt-icon-box-wraper">
+												<h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.team}}</span><b>+</b></h2>                                                
+                                                <h5 class="wt-tilte m-b0 text-white">Сотрудников</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
+                                            <div class="m-b30 wt-icon-box-wraper">
+                                                <h2 class="text-primary m-b5 font-weight-800"><span class="counter m-r5">{{num.star}}</span><b>+</b></h2> 
+                                                <h5 class="wt-tilte m-b0 text-white">Звездный Хостел</h5>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row no-col-gap">
+                                <div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
+                                    <div class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block hover-box-effect" >
+                                        <div class="icon-md text-primary">
+                                            <span class="icon-cell text-white"><i class="flaticon-hotel"></i></span>
+                                        </div>
+                                        <div class="icon-content text-white">
+                                            <h4 class="wt-tilte m-b10">Команаты</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
+                                    <div class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block  hover-box-effect" >
+                                        <div class="icon-md text-primary">
+                                            <span class="icon-cell text-white"><i class="flaticon-coffee-cup"></i></span>
+                                        </div>
+                                        <div class="icon-content  text-white">
+                                            <h4 class="wt-tilte m-b10">Кухня</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
+                                    <div class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block  hover-box-effect">
+                                        <div class="icon-md text-primary">
+                                            <span class="icon-cell text-white"><i class="flaticon-cards"></i></span>
+                                        </div>
+                                        <div class="icon-content  text-white">
+                                            <h4 class="wt-tilte m-b10">Игровая зона</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6  col-sm-6 col-xs-6 col-xs-100pc">
+                                    <div class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white bgcall-block hover-box-effect">
+                                        <div class="icon-md text-primary">
+                                            <span class="icon-cell text-white"><i class="flaticon-conference"></i></span>
+                                        </div>
+                                        <div class="icon-content  text-white">
+                                            <h4 class="wt-tilte m-b10">Конференц зал</h4>
+                                        </div>
+                                    </div>
+                                </div>                                                                                
+                            </div>                        
+                        </div>
+                    </div>                                     
+                </div>
+            </div>   
+            <!-- OUR SPECIALLIZATION END -->
+            
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t80 p-b50 bg-white">
+           
+				<div class="container">
+                
+                    <!-- TITLE START -->
+                    <div class="section-head text-left">
+                        <h2 class="m-b5" data-title="Новости">Наш Блог</h2>
+                        <div class="wt-separator-outer">
+                            <div class="wt-separator bg-primary"></div>
+                        </div>
+                    </div>
+                    <!-- TITLE END -->  
+     
+                    <!-- IMAGE CAROUSEL START -->
+                    <div class="section-content">
+                        
+                        
+						<div class="row">
+                            {% for blog in blog%}
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-post latest-blog-1 date-style-2">
+                                    <div class="wt-post-media wt-img-effect zoom-slow">
+                                        <a href="{% url 'blog_detail' blog.id%}"><img src="{{blog.image.url}}" alt=""></a>
+                                    </div>
+                                    <div class="wt-post-info">
+                                        <div class="post-date"> <strong>{{blog.blog_time}}</strong></div> 
+                                        
+                                            <div class="wt-post-meta">
+                                                <ul class="clearfix">
+                                                    <li class="post-author">
+                                                        <div class="post-author-pic">
+                                                            <span><img src="{{setting.logo.url}}" alt=""></span>
+                                                            <span><strong> By</strong> <a >{{setting.title}}</a></span>
+                                                        </div> 
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                                                               
+                                            <div class="wt-post-title">
+                                                <h3 class="post-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.title}}</a></h3>
+                                            </div>
+                                            
+                                            <div class="wt-post-text">
+                                                <p>{{blog.descriptions}}</p>
+                                            </div>
+                                            
+                                            <div class="readmore-line">
+                                                <a href="{% url 'blog_detail' blog.id%}" class="site-button-ink text-primary font-weight-900 ">Read More</a>
+                                            </div> 
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                            {% endfor%}
+                            
+                        </div> 
+                                               
+                    </div>
+                </div>
+                
+            </div>   
+            <!-- OUR BLOG END -->   
+            <!-- TESTIMONIALS SECTION START -->
+            <div class="section-full p-t80 p-b80  overlay-wraper" data-stellar-background-ratio="0.5" style="background-image:url({% static 'images/background/bg-2.jpg' %});">
+            <div class="overlay-main opacity-05 bg-black"></div>
+ 
+                <div class="container">
+                    <div class="section-content">
+                    
+                        <!-- TITLE START -->
+                        <div class="section-head text-left">
+                            <h2 class="m-b5 text-white" data-title="Отзывы">Что говорят аши клиенты ?</h2>
+                            <div class="wt-separator-outer">
+                                <div class="wt-separator bg-primary"></div>
+                            </div>
+                        </div>
+                        <!-- TITLE END --> 
+                    
+                        <!-- TESTIMONIAL 4 START ON BACKGROUND -->   
+                        <div class="section-content">
+                            <div class="testimonial-home owl-carousel  owl-btn-top-right">
+                                {% for user in review%}
+                                <div class="item">
+                                    <div class="testimonial-6">
+                                        <div class="testimonial-pic-block"> 
+                                            <div class="testimonial-pic">
+                                                <img src="{{user.image_user.url}}" width="132" height="132" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-text clearfix text-white">
+                                            <div class="testimonial-detail ">
+                                                <h4 class="testimonial-name m-t0 m-b10">{{user.name_user}}</h4>
+                                            </div>
+                                            <div class="testimonial-paragraph text-black p-t5">
+                                                <p>“{{user.message_user}}</p>
+                                            </div>
+                                            <div class="testimonial-detail ">
+                                            	<span class="testimonial-position">{{user.email_user}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor%}                                           
+                            </div>
+                            <div class="extra-cell">
+                                <a href="#" class="contact-slide-show text-white"><i class="btn-half site-button button-lg m-b30">Оставить отзыв!</i><em></em></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <!-- TESTIMONIALS SECTION END --> 
+             
+            <!-- OUR PARTNERS START -->
+            <div class="section-full p-tb80 bg-gray">
+				<div class="container">
+                
+                    <!-- TITLE START -->
+                    <div class="section-head text-left">
+                        <h2 class="m-b5" data-title="Партнеры">Наши Партнеры</h2>
+                        <div class="wt-separator-outer">
+                            <div class="wt-separator bg-primary"></div>
+                        </div>
+                    </div>
+                    <!-- TITLE END -->  
+     
+					<div class="section-content">
+                    	<div class="client-grid grid-4">
+                            {% for i in partners%}
+                        	<div class="col-xs-12 col-sm-4">
+                            	<a href="{{i.url}}" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{i.name}}">
+                               	<img src="{{i.logo.url}}" alt=""> 
+                                </a>
+                            </div>
+                            {% endfor%}
+                           
+                        </div>
+                    </div>
+                </div>
+                
+             </div>   
+            <!-- OUR PARTNERS END --> 
+            
+            
+
+                                     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        {% include 'include/footer.html'%}
+        <!-- FOOTER END -->        
+
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+        
+     
+    </div>
+ 
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
+    </div>
+</div>
+    
+<!-- LOADING AREA  END ====== -->
+
+<!-- JAVASCRIPT  FILES ========================================= --> 
+{% endblock%}

@@ -55,27 +55,27 @@
      
                     <!-- IMAGE CAROUSEL START -->
                     <div class="our-team-two p-lr15">
-                        <div class="row">
+                        <div class="container">
+                            <div id="gallery">
                             {% for gallery in gallery%}
                             <div class="col-md-4 col-sm-6">
-                            	<div class="wt-team-arc2">
-                                	
-                                    <div class="wt-media">
-                                        <img src="{{gallery.image.url}}" style="max-width:400px;" alt="">
-                                            
-                                    </div>                                   
-
-                                    {% comment %} <div class="wt-info">
-                                        <div class="team-detail  text-center">
-                                            <h4 class="m-t0">{{team.name}}</h4>
-                                            <p>{{team.work}}</p>
+                                <div class="wt-box">
+                                    <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom yt-thum-box">
+                                        <img src="http://img.youtube.com/vi/4xgOWWfurpU/0.jpg" alt="">
+                                        <div class="overlay-bx">
+                                            <div class="overlay-icon">
+                                                <a class="mfp-video" href="https://www.youtube.com/watch?v=4xgOWWfurpU">
+                                                    <i class="fa fa-play wt-icon-box-xs"></i>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div> {% endcomment %}
-                            
+                                    </div>
+                                </div>
+
                                 </div>
                             </div>
                             {% endfor%}                                            
-                            
+                        </div>
                         </div>
                         
                         
@@ -115,7 +115,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- JAVASCRIPT  FILES ========================================= --> 
 {% endblock%}

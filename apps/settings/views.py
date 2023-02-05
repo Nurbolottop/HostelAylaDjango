@@ -4,7 +4,7 @@ from apps.contact.models import Contact
 from apps.about.models import About
 from apps.rooms.models import Room
 from apps.review.models import Review
-from apps.blog.models import Blog, BackroundBlog
+from apps.blog.models import Blog
 
 
 # from apps.rooms.models import Room
@@ -44,4 +44,4 @@ def index(request):
         
         
     }
-    return render(request, 'index.html', context)
+    return render(request, 'website/index.html', context)

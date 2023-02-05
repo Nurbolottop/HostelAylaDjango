@@ -1,0 +1,288 @@
+{% extends 'homepage.html'%}
+{% load static %}
+{% block content%}
+
+	<div class="page-wraper"> 
+
+        <!-- HEADER START -->
+        {% include 'include/header.html'%}
+        <!-- HEADER END -->
+        
+        <!-- CONTENT START -->
+        <div class="page-content ">
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url({{backround.image.url}});">
+            	<div class="overlay-main bg-black opacity-07"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                    	<div class="banner-title-outer">
+                        	<div class="banner-title-name">
+                        		<h2 class="text-white  font-80 font-weight-900">Наш Блог</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="{% url 'index'%}">Домой</a></li>
+                                    <li>{{blog.title}}</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+            
+            <!-- SECTION CONTENT START -->
+            <div class="section-full p-tb90 square_shape1 square_shape3">
+                <div class="container">
+
+                    <!-- BLOG START -->
+                    <div class="blog-post date-style-1 blog-detail text-black">
+                        <div class="wt-post-media">
+                            <!--Fade slider-->
+                            <div class="owl-carousel owl-fade-slider-one owl-btn-vertical-center owl-dots-bottom-right m-b30">
+                                {% if blog.image%}    
+                            
+                                        <div class="item">
+                                            <div class="wt-thum-bx">
+                                                <img src="{{blog.image.url}}"width  alt="">
+                                            </div>
+                                        </div>
+                                {%endif%}  
+                                {% for blog in blog.image_blog.all%}
+                                    {% if blog.image%}    
+                            
+                                        <div class="item">
+                                            <div class="wt-thum-bx">
+                                                <img src="{{blog.image.url}}"width  alt="">
+                                            </div>
+                                        </div>
+                                    {%endif%}    
+                                {% endfor%}
+                                
+                            
+                            </div>
+                            <!--fade slider END-->
+                        </div>
+                        
+                        <div class="wt-post-meta ">
+                            <ul>
+                                <li class="post-date"><i  class="fa fa-calendar"></i><strong>{{blog.blog_time}}</strong> <span> </span> </li>
+                                <li class="post-author"><i class="fa fa-user"></i><a href="javascript:void(0);">By <span>{{setting.title}}</span></a> </li>
+                            </ul>
+                        </div>  
+                                                      
+                        <div class="wt-post-title ">
+                            <h3 class="post-title">{{blog.title}}</h3>
+                        </div>
+                        
+                        
+                            
+                                                                 
+                            	
+                        
+                        <div class="wt-post-text">
+                            <blockquote class="font-weight-500">
+                                <p>{{blog.descriptions}}</p>
+                                
+                              
+                            </blockquote>
+
+									
+                                                
+                    	
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="section-content">
+                        <!-- TITLE START -->
+                        <div class="text-left section-head">
+                            <h2 class="m-b5">Related Post</h2>
+                            <div class="wt-separator-outer">
+                                <div class="wt-separator bg-primary"></div>
+                            </div>
+                        </div>
+                        <!-- TITLE END -->
+                        <!-- CAROUSEL -->
+                        <div class="section-content">
+                            <div class="row">
+                        
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-post latest-blog-1 date-style-2">
+                                    <div class="wt-post-media wt-img-effect zoom-slow">
+                                        <a href="javascript:;"><img src="images/blog/default/thum4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="wt-post-info">
+                                        <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
+                                        
+                                            <div class="wt-post-meta">
+                                                <ul class="clearfix">
+                                                    <li class="post-author">
+                                                        <div class="post-author-pic">
+                                                            <span><img src="images/testimonials/pic1.jpg" alt=""></span>
+                                                            <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
+                                                        </div> 
+                                                    </li>
+                                                    <li class="post-comment"><i class="fa fa fa-comments text-primary"></i><a href="javascript:;">10 Comment</a> </li>
+                                                </ul>
+                                            </div> 
+                                                                               
+                                            <div class="wt-post-title">
+                                                <h3 class="post-title"><a href="javascript:;">Your first source for architecture, dsign and art news.</a></h3>
+                                            </div>
+                                            
+                                            <div class="wt-post-text">
+                                                <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusd veritatis quisquam laboriosam asperiores, tenetur, blanditiis,quaerat odit ex exercitationem pariatur.</p>
+                                            </div>
+                                            
+                                            <div class="readmore-line">
+                                                <a href="javascript:;" class="site-button-ink text-primary font-weight-900 ">Read More</a>
+                                            </div> 
+                                            
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blog-post latest-blog-1 date-style-2">
+                                    <div class="wt-post-media wt-img-effect zoom-slow">
+                                        <a href="javascript:;"><img src="images/blog/default/thum7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="wt-post-info">
+                                        <div class="post-date"> <strong>20 Mar 2019 </strong></div> 
+                                        
+                                            <div class="wt-post-meta">
+                                                <ul class="clearfix">
+                                                    <li class="post-author">
+                                                        <div class="post-author-pic">
+                                                            <span><img src="images/testimonials/pic2.jpg" alt=""></span>
+                                                            <span><strong> By</strong> <a href="javascript:;">Loretta Shelton</a></span>
+                                                        </div> 
+                                                    </li>
+                                                    <li class="post-comment"><i class="fa fa fa-comments text-primary"></i><a href="javascript:;">10 Comment</a> </li>
+                                                </ul>
+                                            </div> 
+                                                                               
+                                            <div class="wt-post-title">
+                                                <h3 class="post-title"><a href="javascript:;">Your first source for architecture, dsign and art news.</a></h3>
+                                            </div>
+                                            
+                                            <div class="wt-post-text">
+                                                <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur quibusd veritatis quisquam laboriosam asperiores, tenetur, blanditiis,quaerat odit ex exercitationem pariatur.</p>
+                                            </div>
+                                            
+                                            <div class="readmore-line">
+                                                <a href="javascript:;" class="site-button-ink text-primary font-weight-900 ">Read More</a>
+                                            </div> 
+                                            
+                                        </div>
+                                </div>
+                            </div>                                        
+                        </div>
+                        </div>
+                    </div> {% endcomment %}
+                    
+                    <div class="clear" id="comment-list">
+                        <div class="comments-area" id="comments">
+                            <div class="p-tb30">
+                                <!-- COMMENT LIST START -->
+                                <ol class="comment-list p-a30 bg-gray">
+                                    <li class="comment">
+                                    	<!-- COMMENT BLOCK -->
+                                        {% for comment in blog.post_comment.all%}
+
+                                            <div class="comment-body">
+                                                <div class="comment-meta">
+                                                    <a>{{comment.created}}</a>
+                                                </div>                                        
+                                                <div class="comment-author vcard">
+                                                    <cite class="fn">{{comment.name}}</cite>
+                                                </div>
+
+                                                <p>{{comment.message}}</p>
+                                                <div class="reply">
+                                                </div>
+                                            </div>
+                                            <hr
+                                            <!-- SUB COMMENT BLOCK -->
+                                        {% endfor %}
+                                    </li>
+                                    
+                                </ol>
+                                <!-- COMMENT LIST END -->
+                                
+                                <!-- LEAVE A REPLY START -->
+                                <div class="comment-respond m-t30" id="respond">
+    
+                                    <h2 class="comment-reply-title" id="reply-title">Оставить комментарий
+                                        <small>
+                                            <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
+                                        </small>
+                                    </h2>
+                                    <div class="comment-form">
+                                        <form method="POST">
+                                            {%csrf_token%}
+
+                                    
+                                            <p class="comment-form-author">
+                                                <label for="author">Имя <span class="required"></span></label>
+                                                <input class="form-control" type="text"  name="name"  placeholder="Имя" 
+                                            </p>
+                                            
+                                            <p class="comment-form-email">
+                                                <label for="email">Почта <span class="required"></span></label>
+                                                <input class="form-control" type="text"  name="email" placeholder="Почта"                                          </p>
+                                            
+                                        
+                                            
+                                            <p class="comment-form-comment">
+                                                <label for="comment">Комментарий</label>
+                                                <textarea class="form-control"  name="message" placeholder="Комментарий" ></textarea>
+                                            </p>
+                                            
+                                            <p class="form-submit">
+                                                <button class="site-button radius-no text-uppercase font-weight-600" type="submit">Отправить</button>
+                                            </p>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- LEAVE A REPLY END -->
+                           </div>
+                        </div>
+                    </div>
+                    <!-- BLOG END -->
+                        
+                </div>
+            </div>
+            <!-- SECTION CONTENT END -->
+
+        </div>
+        <!-- CONTENT END -->
+        
+        <!-- FOOTER START -->
+        {% include 'include/footer.html'%}
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+        
+    </div>
+
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== --> 
+
+{% endblock%}
