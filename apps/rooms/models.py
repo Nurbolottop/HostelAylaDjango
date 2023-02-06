@@ -30,9 +30,9 @@ class Room(models.Model):
         max_length=255,
         verbose_name="Оценка чистоты от 1 до 5"
         )
+        
     def __str__(self):
         return f"{self.title} - {self.descriptions}"
-    
     
     class Meta:
         verbose_name = "Наш номер"
