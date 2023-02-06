@@ -142,29 +142,31 @@
                                             <h4 class="modal-title text-black">Забронировать {{room.title}}</h4>
                                           </div>
                                           <div class="modal-body">
-                                            <form id="demo-form" class="form-horizontal mb-lg" novalidate>
+                                            <form  class="form-horizontal mb-lg"  method = "POST">
+                                                {% csrf_token %}
                                                 <div class="form-group mt-lg">
-                                                    <label class="col-sm-3 control-label">Name</label>
+                                                    <label class="col-sm-3 control-label">Ф.И.О</label>
                                                     <div class="col-sm-9">
-                                                        <input name="name" class="form-control" placeholder="Type your name..." required type="text">
+                                                        <input name="name" class="form-control" placeholder="Введите ваше Ф.И.О..." required type="text">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Email</label>
+                                                    <label class="col-sm-3 control-label">Почта</label>
                                                     <div class="col-sm-9">
-                                                        <input name="email" class="form-control" placeholder="Type your email..." required type="email">
+                                                        <input name="email" class="form-control" placeholder="Введите вашу почту..." required type="email">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">URL</label>
+                                                    <label class="col-sm-3 control-label">Тел.ном</label>
                                                     <div class="col-sm-9">
-                                                        <input name="url" class="form-control" placeholder="Type an URL..." type="url">
+                                                        <input name="number" class="form-control" placeholder="Введите ваш телефонный номер..." type="tel">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Comment</label>
+                                                    <label class="col-sm-3 control-label">Сообщение</label>
                                                     <div class="col-sm-9">
-                                                    <textarea rows="5" class="form-control" placeholder="Type your comment..." required></textarea>
+                                                        
+                                                    <textarea rows="5" class="form-control" name="message" placeholder="Введите ваше сообщение..." required></textarea>
                                                     </div>
                                                 </div>
                                             </form>

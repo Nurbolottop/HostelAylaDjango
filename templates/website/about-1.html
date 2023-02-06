@@ -224,82 +224,27 @@
                     </div>
                     <!-- TITLE END -->                	
                     <div class="section-content our-story">
-                    
+                        {% for history in history%}
                         <div class="row">
                         	<div class="col-md-6 col-sm-6">
                                 <div class="our-story-pic-block">
                                 	<div class="notification-animate">	
                                         <div class="wt-media our-story-pic wt-img-effect zoom-slow">
-                                            <img src="{% static 'images/gallery/pic1.jpg' %}" alt="">
+                                            <img src="{{history.image.url}}" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         	<div class="col-md-6 col-sm-6">
                             	<div class="wt-box our-story-detail">
-                                    <h4>2011-12</h4>
-                                    <h3 class=" m-b10">Park Boathouse</h3>
-                                    <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis id. In viverra ipsum stie id viverra</p>
+                                    <h4>{{history.years}}</h4>
+                                    <h3 class=" m-b10">{{history.name}}</h3>
+                                    <p>{{history.description}}</p>
                                 </div>
                             </div>
                         </div> 
                          
-                        <div class="row">
-                        	<div class="col-md-6 col-sm-6">
-                            	<div class="our-story-pic-block">
-                                	<div class="notification-animate">
-                                        <div class="wt-media our-story-pic wt-img-effect zoom-slow">
-                                            <img src="{% static 'images/gallery/pic3.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div class="col-md-6 col-sm-6">
-                            	<div class="wt-box our-story-detail">
-                                    <h4>2013-14</h4>
-                                    <h3 class=" m-b10">Museum Expansion</h3>
-                                    <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis id. In viverra ipsum stie id viverra </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                        	<div class="col-md-6 col-sm-6">
-                                <div class="our-story-pic-block">
-                                	<div class="notification-animate">
-                                        <div class="wt-media our-story-pic wt-img-effect zoom-slow">
-                                            <img src="{% static 'images/gallery/pic4.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        	<div class="col-md-6 col-sm-6">
-                            	<div class="wt-box our-story-detail">
-                                    <h4>2015-16</h4>
-                                    <h3 class=" m-b10">Eisenhower Memoria</h3>
-                                    <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis id. In viverra ipsum stie id viverra </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                        	<div class="col-md-6 col-sm-6">
-                            	<div class="our-story-pic-block">
-                                	<div class="notification-animate">
-                                        <div class="wt-media our-story-pic wt-img-effect zoom-slow">
-                                            <img src="{% static 'images/gallery/pic5.jpg' %}" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        	<div class="col-md-6 col-sm-6">
-                            	<div class="wt-box our-story-detail">
-                                   <h4>2017-18</h4>
-                                    <h3 class=" m-b10">Columbia Sport Center</h3>
-                                    <p>Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis id. In viverra ipsum stie id viverra. </p>
-                                </div>
-                            </div>                            
-                        </div>
+                        {% endfor %}
                                                             
                     </div>
                 </div>

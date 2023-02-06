@@ -70,7 +70,7 @@ class ImageRoom(models.Model):
         verbose_name="Фотография номера", 
         blank=True, null=True)
     
-    def __str(self):
+    def __str__(self):
         return f"{self.room} - {self.image}"
 
     class Meta:
