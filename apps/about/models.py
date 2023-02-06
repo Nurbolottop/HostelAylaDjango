@@ -35,3 +35,27 @@ class BackroundAbout(models.Model):
         verbose_name = "Задний фон страницы <<О нас>>"
         verbose_name_plural = "Задний фон страницы <<О нас>>"
         
+class History(models.Model):
+    image = models.ImageField(
+        upload_to="about_history",
+        verbose_name="Фотография"
+    )
+    years = models.CharField(
+        max_length=244,
+        verbose_name="Год"
+        )
+    name = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+        )
+    description = models.TextField(
+        verbose_name="Описание"
+    )
+    
+    def __str__(self):
+        return f"{self.years}: {self.name} - {self.description}"
+    
+    class Meta:
+        verbose_name = 'Наша история'
+        verbose_name_plural = 'Наша история'
+    

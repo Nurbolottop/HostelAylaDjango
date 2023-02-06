@@ -54,3 +54,17 @@ class BackroundContact(models.Model):
     class Meta:
         verbose_name = "Задний фон страницы <<Контакты>>"
         verbose_name_plural = "Задний фон страницы <<Контакты>>"
+        
+        
+class Comment(models.Model):
+    name = models.CharField(max_length=255, verbose_name="Имя!")
+    email = models.EmailField(verbose_name='Почта')
+    message = models.TextField(verbose_name='Сообщение')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Последная Связь '
+        verbose_name_plural = 'Последние Связи '
+        ordering = ('id', )

@@ -142,7 +142,7 @@
                             data-paddingleft="[0,0,0,0]"
                             
                             style="z-index:13; text-transform:uppercase;">
-                            <a href="javascript:;" class="site-button slider-btn-left btn-half"><span> More About</span><em></em></a>
+                            <a  class="site-button slider-btn-left btn-half" data-toggle="modal" data-target="#with-form"><span> More About</span><em></em></a>
                             </div>
 
      
@@ -150,6 +150,53 @@
                         {% endfor %}                       
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	
+                </div>
+            </div>
+            <div class="button-model">
+                <!-- TRIGGER THE MODAL WITH A BUTTON -->
+                <!-- MODAL -->
+                <div id="with-form" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header bg-secondry">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 >Забронировать {{room.title}}</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form id="demo-form" class="form-horizontal mb-lg" novalidate>
+                            <div class="form-group mt-lg">
+                                <label class="col-sm-3 control-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input name="name" class="form-control" placeholder="Type your name..." required type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input name="email" class="form-control" placeholder="Type your email..." required type="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">URL</label>
+                                <div class="col-sm-9">
+                                    <input name="url" class="form-control" placeholder="Type an URL..." type="url">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Comment</label>
+                                <div class="col-sm-9">
+                                <textarea rows="5" class="form-control" placeholder="Type your comment..." required></textarea>
+                                </div>
+                            </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="site-button text-uppercase button-sm letter-spacing-2 m-r15" data-dismiss="modal">Close</button>
+                        <button type="button" class="site-button text-uppercase button-sm letter-spacing-2">Save Changes </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
             <!-- SLIDER END -->
@@ -340,44 +387,42 @@
                                       
                 </div>  
                                 
-				<div class="container-fluid">
-                    <!-- IMAGE CAROUSEL START -->
-                    <div class="section-content">
-                        <div class="owl-carousel owl-carousel-filter2 owl-btn-bottom-center">
-                            <!-- COLUMNS 1 --> 
-                            {% for room in room %}
-                            <div class="item col-1" style="max-width:400px;">
-                                <div class="room-rent-section-outer" >
-                                    <div class="room-rent-section">
-                                        <div class="rooms-pic-section">
-                                            <div class="wt-media">
-                                                <img src="{{room.image1.url}}"  alt="">
-                                                <div class="overlay-bx-3"></div>
-                                                <h3 class="m-b0 wt-title">{{room.title}}</h3>
-                                            </div>
+				<!-- GALLERY CONTENT START -->
+                <div class="portfolio-wrap mfp-gallery news-grid clearfix">
+                    <div class="row">
+                        <!-- COLUMNS 1 -->
+                        {% for room in room %}
+                            <div class="masonry-item cat-1 col-lg-4 col-md-6 col-sm-6 m-b30" style="max-width:300px;">
+                                <div class="wt-img-effect ">
+                                    <img src="{{room.image1.url}}" width ='300px' alt="">
+                                </div>
+                                <div class="p-a20 bg-white">
+                                    <div class="wt-post-info">
+                                        <div class="wt-post-meta ">
+                                            <ul>
+                                                <li class="post-author"><i class="fa fa-money"></i><a><span>Цена</span></a> </li>
+                                                <li class="post-date"><strong>{{room.price}}</strong> </li>
 
+                                                <li class="post-comment"><i ></i><a > <span>Сомов</span></a> </li>
+                                            </ul>
                                         </div>
-                                        <div class="room-info-section text-black">
-                                            <span>{{room.price}}/в ночь</span>
-                                            {% comment %} <ul class="clearfix">
-                                                <li><i class="fa fa-expand"></i> <strong>Size:</strong> 30m² </li>
-                                                <li><i class="fa fa-user"></i> <strong>Adult:</strong> 3 </li>
-                                                <li><i class="fa fa-eye"></i> <strong>View:</strong> balcony </li>
-                                            </ul> {% endcomment %}
+                                                                            
+                                        <div class="wt-post-title ">
+                                            <h3 class="post-title"><a href="{% url 'rooms_detail' room.id%}" class="  m-t0">{{room.title}}</a></h3>
                                         </div>
+                                        
+                                        <div class="wt-post-text">
+                                            <p>{{room.descriptions}}</p> 
+                                        </div>
+                                        <a href="{% url 'rooms_detail' room.id%}" class="btn-half site-button button-md m-b15"><span>Узнать Больше</span><em></em></a>
                                     </div>
-                                    <a href="{% url 'rooms_detail' room.id%}" class="btn-half site-button button-lg"><span>Узнать больше</span><em></em></a>
                                 </div>
                             </div>
-                            
-                            {% endfor %}                                
-                              
-                            <!-- COLUMNS 8 -->                         
-                            
-    
-                        </div>
+                        {% endfor %}
+                                                                                                                     
                     </div>
-                </div>
+            </div>
+            <!-- GALLERY CONTENT END -->
                 
              </div>   
             <!-- ROOMS  SLIDER END -->
@@ -508,9 +553,9 @@
 						<div class="row">
                             {% for blog in blog%}
                             <div class="col-md-6 col-sm-6">
-                                <div class="blog-post latest-blog-1 date-style-2">
-                                    <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="{% url 'blog_detail' blog.id%}"><img src="{{blog.image.url}}" alt=""></a>
+                                <div class="blog-post latest-blog-1 date-style-2" style="max-width:300px;">
+                                    <div class="wt-post-media wt-img-effect zoom-slow" >
+                                        <a href="{% url 'blog_detail' blog.id%}"><img src="{{blog.image.url}}"  alt=""></a>
                                     </div>
                                     <div class="wt-post-info">
                                         <div class="post-date"> <strong>{{blog.blog_time}}</strong></div> 
@@ -559,7 +604,7 @@
                     
                         <!-- TITLE START -->
                         <div class="section-head text-left">
-                            <h2 class="m-b5 text-white" data-title="Отзывы">Что говорят аши клиенты ?</h2>
+                            <h2 class="m-b5 text-white" data-title="Отзывы">Что говорят наши клиенты ?</h2>
                             <div class="wt-separator-outer">
                                 <div class="wt-separator bg-primary"></div>
                             </div>
@@ -617,7 +662,7 @@
 					<div class="section-content">
                     	<div class="client-grid grid-4">
                             {% for i in partners%}
-                        	<div class="col-xs-12 col-sm-4">
+                        	<div class="col-xs-12 col-sm-4" style="max-width:200px;" >
                             	<a href="{{i.url}}" class="wt-img-effect client-logo-media" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{i.name}}">
                                	<img src="{{i.logo.url}}" alt=""> 
                                 </a>
