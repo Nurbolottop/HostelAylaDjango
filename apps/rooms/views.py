@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from apps.settings.models import Setting
-from apps.rooms.models import Room,BackroundRoom,Comment, ImageRoom, Amenities
+from apps.rooms.models import Room,BackroundRoom,Comment
 
 from apps.contact.models import Contact
 # Create your views here.

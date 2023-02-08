@@ -6,12 +6,19 @@ class ImageRoomAdmin(admin.TabularInline):
     model = ImageRoom
     extra = 5
 
+class AmenitiesRoomAdmin(admin.TabularInline):
+    model = Amenities
+    extra = 2
+
 class RoomAdmin(admin.ModelAdmin):
-    inlines = (ImageRoomAdmin, )
+    inlines = (ImageRoomAdmin,AmenitiesRoomAdmin)
     list_filter = ('title', )
     list_display = ('title', 'descriptions', 'price')
     search_fields = ('title', 'descriptions', 'price')
     list_per_page = 20
+    
+
+
 
 class CommentAdmin(admin.ModelAdmin):
     list_filter = ('name', )
@@ -24,5 +31,5 @@ admin.site.register(Room, RoomAdmin)
 admin.site.register(BackroundRoom)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(ImageRoom)
-admin.site.register(Amenities)
+admin.site.register(Amenities,)
 

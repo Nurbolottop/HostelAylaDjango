@@ -40,6 +40,9 @@ class Partners(models.Model):
     logo = models.ImageField(upload_to="partners/", verbose_name="Логотип партнера")
     url = models.URLField(verbose_name="Ссылка на них")
     
+    def __str__(self):
+        return self.name
+     
     class Meta:
         verbose_name = "Наш партнер"
         verbose_name_plural = "Наши  партнеры"
@@ -54,4 +57,9 @@ class Number(models.Model):
     game = models.ImageField(upload_to="number", verbose_name="Фотография Игровой зоны")
     conference = models.ImageField(upload_to="number", verbose_name="Фотография Конференц зала")
     
+    def __str__(self):
+        return f"Клиентов: {self.client}. Сотрудников: {self.team}. Звездый хостела: {self.star}"
+    class Meta:
+        verbose_name = "Мы в числах"
+        verbose_name_plural = "Мы в числах"
     
